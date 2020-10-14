@@ -1,4 +1,43 @@
+@import './Base.scss';
+@import './Variables.scss';
+@import './Reusable.scss';
+
 .App {
+  //https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space
+  //zajmowanie calego miejsca przez App
+  /*   display: flex;
+  flex-flow: column;
+  height: 100%; */
+}
+
+/* .main {
+  flex: 1 1 auto; // zajmij reszte miejsca wolnej strony
+  display: flex;
+  flex-flow: column;
+} */
+
+/* .hero {
+  //flex: 1 1 auto;
+  //height: 100vh;
+  height: calc(100vh - 44px);
+} */
+
+.main {
+  padding-top: 44px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -32,7 +71,8 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
-}
+} */
