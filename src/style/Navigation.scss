@@ -1,0 +1,14 @@
+@import './App.scss';
+
+.navigation {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //: 1rem 0 1rem 0;
+    padding: 0rem 1.3rem;
+    height: $navigationHeight;
+    background-color: $navigationBackground;
+}
