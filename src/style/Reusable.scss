@@ -1,0 +1,57 @@
+@import './Base.scss';
+
+@mixin button($width, $height, $fontSize) {
+    width: $width;
+    height: $height;
+    font-family: $fontTwo;
+    font-style: italic;
+    font-weight: 600;
+    font-size: $fontSize;
+    line-height: $fontSize;
+    cursor: pointer;
+    //text-align: center;
+    /*     display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.button-check {
+    background-color: #FFFFFF;
+    border: 3px solid $gold;
+    color: $gold;
+
+    &:hover {
+        background-color: $gold;
+        color: #F1ECE6;
+        border: 3px solid #FFFFFF;
+    }
+}
+
+.button-contact {
+    background-color: $gold;
+    border: 3px solid #FFFFFF;
+    color: #F1ECE6;
+
+    &:hover {
+        background-color: #FFFFFF;
+        border: 3px solid $gold;
+        color: $gold;
+    }
+}
+
+
+/*   width: 126px;
+height: 47px;
+
+background: #FFFFFF;
+border: 3px solid #C19D56;
+box-sizing: border-box;
+
+font-family: Josefin Sans;
+font-style: italic;
+font-weight: 600;
+font-size: 18px;
+line-height: 18px;
+text-align: center;
+color: #C19D56;
+*/
