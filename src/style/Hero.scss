@@ -1,13 +1,21 @@
 @import './App.scss';
 
+$navigationHeight2: calc(44px + (118 - 44) * ((100vw - 360px) / (1024 - 360)));
+
 .hero {
     height: calc(100vh - #{$navigationHeight});
     //height: 100vh;
     background-image: url(../images/tłoKwiatyLight.webp);
     background-repeat: no-repeat;
     background-size: cover;
+
     //background-position: left center;
     //height: 640px;
+    @media screen and (orientation:portrait) and (min-width : 768px) and (max-width : 1024px) {
+        background-image: url(../images/tłoKwiatyMedium.webp);
+        background-position: 0px calc(0px + (75 - 0) * ((100vw - 360px) / (1024 - 360)));
+        ;
+    }
 
     &__author {
         position: absolute;
@@ -33,6 +41,30 @@
         border: 3px solid $gold;
         //box-sizing: border-box;
         border-radius: 44.5px;
+
+        //Responsive styles
+        @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
+            width: calc(190px + (345 - 190) * ((100vw - 360px) / (1024 - 360)));
+            height: calc(75px + (123 - 75) * ((100vw - 360px) / (1024 - 360)));
+            font-size: calc(36px + (64 - 36) * ((100vw - 360px) / (1024 - 360)));
+            border-radius: calc(44.5px + (80 - 44.5) * ((100vw - 360px) / (1024 - 360)));
+            border-width: calc(3px + (6 - 3) * ((100vw - 360px) / (1024 - 360)));
+        }
+
+
+        //Ipad pro
+        /*  position: absolute;
+        width: 345px;
+        height: 123px;
+        left: 340px;
+        top: 413px; 
+        border-radius: 80px;
+        font-size:64px;
+        */
+
+        @media (orientation: landscape) {
+            top: 15%;
+        }
     }
 
     &__poster {
@@ -43,7 +75,29 @@
         top: 22.5%; */
         left: 50%;
         transform: translate(-50%);
+        //width: 257px;
+
+
+        //ipad pro
+        /*         position: absolute;
+        width: 611.38px;
+        height: 441.57px;
+        left: 819.02px;
+        top: 520px; */
+
+        @media (orientation: landscape) {
+            top: 32%;
+        }
+    }
+
+    &__img {
         width: 257px;
+
+        //Responsive styles
+        @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
+            width: calc(257px + (611.38 - 257) * ((100vw - 360px) / (1024 - 360)));
+            //height: 441.57px;
+        }
     }
 
     &__primaryTitle {
@@ -57,6 +111,12 @@
         font-weight: 400;
         width: 235px;
         color: $gold;
+
+        //Responsive Styles
+        @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
+            width: calc(235px + (500 - 235) * ((100vw - 360px) / (1024 - 360)));
+            font-size: calc(42px + (96 - 42) * ((100vw - 360px) / (1024 - 360)));
+        }
 
         span {
             color: black;
@@ -74,6 +134,20 @@
         top: 33.3%; */
         left: 50%;
         transform: translateX(-50%);
+
+        //Responsive Styles
+        @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
+            width: calc(309px + (808 - 309) * ((100vw - 360px) / (1024 - 360)));
+        }
+
+        //ipad pro
+        /*         position: absolute;
+        width: 349px;
+        height: 106px;
+        left: 108px;
+        top: 1138px; 
+        font-size: 48px;
+        */
     }
 
     &__button {
@@ -86,8 +160,50 @@
         &--contact {
             @extend .button-contact;
         }
+
+        //Responsive Styles
+        @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
+            width: calc(126px + (349 - 126) * ((100vw - 360px) / (1024 - 360)));
+            height: calc(47px + (106 - 47) * ((100vw - 360px) / (1024 - 360)));
+            font-size: calc(18px + (47 - 18) * ((100vw - 360px) / (1024 - 360)));
+            line-height: calc(18px + (47 - 18) * ((100vw - 360px) / (1024 - 360)));
+        }
+    }
+
+    &__lukier {
+        position: absolute;
+        //width: 368px;
+        width: 100%;
+        height: 77px;
+        //height: 65px;
+        //left: -8px;
+        //top: 615px;
+        top: 96.9%;
+
+        //Responsive Styles
+        @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
+            height: calc(77px + (155 - 77) * ((100vw - 360px) / (1024 - 360)));
+        }
+
+        //ipad pro
+        /*         position: absolute;
+        width: 1060px;
+        height: 155px;
+        left: -36px;
+        top: 1330px; */
     }
 }
+
+
+
+/* position: absolute;
+width: 368px;
+height: 77px;
+left: -8px;
+top: 615px; */
+
+
+
 
 /* .hero__poster {
     position: absolute;
