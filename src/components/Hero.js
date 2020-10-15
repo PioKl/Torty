@@ -1,7 +1,8 @@
 import React from 'react';
 import '../style/Hero.scss';
 
-import obrazek from "../images/vector.png"
+import obrazek from "../images/vector.png";
+import lukier from "../images/lukier.png";
 const Hero = () => {
     return (
         <div className="hero">
@@ -16,6 +17,7 @@ const Hero = () => {
                 <button className="hero__button hero__button--check">Sprawdź</button>
                 <button className="hero__button hero__button--contact">Kontakt</button>
             </div>
+            <img className="hero__lukier" src={lukier} alt="lukier" />
         </div>
 
     );
