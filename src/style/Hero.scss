@@ -1,31 +1,37 @@
 @import './App.scss';
 
-$navigationHeight2: calc(44px + (118 - 44) * ((100vw - 360px) / (1024 - 360)));
-
 .hero {
-    height: calc(100vh - #{$navigationHeight});
+    //height: calc(100vh - #{$navigationHeight});
     //height: 100vh;
+    height: calc(100% - #{$navigationHeight});
     background-image: url(../images/tłoKwiatyLight.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    /*     display: flex;
+    flex-direction: column; */
 
-    //background-position: left center;
-    //height: 640px;
+    //position: relative; // rozwiazanie 2
+
+
     @media screen and (orientation:portrait) and (min-width : 768px) and (max-width : 1024px) {
         background-image: url(../images/tłoKwiatyMedium.webp);
-        background-position: 0px calc(0px + (75 - 0) * ((100vw - 360px) / (1024 - 360)));
-        ;
     }
 
     &__author {
         position: absolute;
         //top: 184px;
-        top: 28.8%;
-        /*        position: relative;
+        //top: 28.8%;
+        top: 23.8%;
+
+        /*     position: relative;
         top: 23.5%; */
+        //position: relative; //rozwiazanie 2
+        //top: 23.5%;
+
+
         //left: 86px;
         left: 50%;
-        transform: translate(-50%);
+        transform: translateX(-50%);
 
         display: flex;
         align-items: center;
@@ -51,39 +57,27 @@ $navigationHeight2: calc(44px + (118 - 44) * ((100vw - 360px) / (1024 - 360)));
             border-width: calc(3px + (6 - 3) * ((100vw - 360px) / (1024 - 360)));
         }
 
-
-        //Ipad pro
-        /*  position: absolute;
-        width: 345px;
-        height: 123px;
-        left: 340px;
-        top: 413px; 
-        border-radius: 80px;
-        font-size:64px;
-        */
-
         @media (orientation: landscape) {
             top: 15%;
         }
     }
 
     &__poster {
+        width: 25.7rem;
         position: absolute;
         //top: 253px;
         top: 39.5%;
-        /*         position: relative;
-        top: 22.5%; */
+
+        //position: relative; //rozwiazanie 2
+        //top: 22.5%;
+
         left: 50%;
         transform: translate(-50%);
-        //width: 257px;
 
-
-        //ipad pro
-        /*         position: absolute;
-        width: 611.38px;
-        height: 441.57px;
-        left: 819.02px;
-        top: 520px; */
+        //Responsive styles
+        @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
+            width: calc(257px + (611.38 - 257) * ((100vw - 360px) / (1024 - 360)));
+        }
 
         @media (orientation: landscape) {
             top: 32%;
@@ -129,9 +123,12 @@ $navigationHeight2: calc(44px + (118 - 44) * ((100vw - 360px) / (1024 - 360)));
         width: 309px;
         position: absolute;
         //top: 510px;
-        top: 79.7%;
-        /*         position: relative;
-        top: 33.3%; */
+        //top: 79.7%;
+        top: 83%;
+
+        //position: relative; //rozwiazanie 2
+        //top: 33.3%;
+
         left: 50%;
         transform: translateX(-50%);
 
@@ -139,15 +136,6 @@ $navigationHeight2: calc(44px + (118 - 44) * ((100vw - 360px) / (1024 - 360)));
         @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
             width: calc(309px + (808 - 309) * ((100vw - 360px) / (1024 - 360)));
         }
-
-        //ipad pro
-        /*         position: absolute;
-        width: 349px;
-        height: 106px;
-        left: 108px;
-        top: 1138px; 
-        font-size: 48px;
-        */
     }
 
     &__button {
@@ -171,86 +159,21 @@ $navigationHeight2: calc(44px + (118 - 44) * ((100vw - 360px) / (1024 - 360)));
     }
 
     &__lukier {
-        position: absolute;
-        //width: 368px;
+        //position: absolute; //jakz robie relative nie wyjdzie, bo bedzie liczony wzgledem jego pierwotnej pozycji, a na ekranie telefonu to sie troche rozni niz w testowaniu
+        //top: 97.3%;
         width: 100%;
-        height: 77px;
-        //height: 65px;
-        //left: -8px;
-        //top: 615px;
-        top: 96.9%;
+        position: relative; //chyba, ze zakomentuje position relatvie w hero
+        top: 97%;
+
+    }
+
+    &__lukier-img {
+        width: 100%;
+        height: 7.7rem;
 
         //Responsive Styles
         @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
             height: calc(77px + (155 - 77) * ((100vw - 360px) / (1024 - 360)));
         }
-
-        //ipad pro
-        /*         position: absolute;
-        width: 1060px;
-        height: 155px;
-        left: -36px;
-        top: 1330px; */
     }
 }
-
-
-
-/* position: absolute;
-width: 368px;
-height: 77px;
-left: -8px;
-top: 615px; */
-
-
-
-
-/* .hero__poster {
-    position: absolute;
-    width: 257px;
-    top: 253px;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-.hero__primaryTitle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 4.2rem;
-    font-family: $fontOne;
-    font-weight: 400;
-    width: 235px;
-    color: $gold;
-
-    span {
-        color: black;
-    }
-} */
-
-/* .test {
-    background-image: url(../images/vector.png);
-    background-repeat: no-repeat;
-    text-align: center;
-    width: 257px;
-    height: 187px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-/* .vector {
-
-
-    position: absolute;
-    width: 251.99px;
-    height: 182px;
-    left: 306.99px;
-    top: 253px;
-
-    background: rgba(254, 244, 240, 0.96);
-    border: 4px solid #C19D56;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-} */
