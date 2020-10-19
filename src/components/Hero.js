@@ -6,6 +6,9 @@ import lukier from "../images/lukier.png";
 const Hero = () => {
     return (
         <div className="hero">
+            {/*             <div className="hero__test">
+                <h2 className="hero__author">Jane Doe</h2>
+            </div> */}
             <h2 className="hero__author">Jane Doe</h2>
             <div className="hero__poster">
                 <img src={obrazek} alt="" className="hero__img" />
@@ -17,7 +20,10 @@ const Hero = () => {
                 <button className="hero__button hero__button--check">Sprawdź</button>
                 <button className="hero__button hero__button--contact">Kontakt</button>
             </div>
-            <img className="hero__lukier" src={lukier} alt="lukier" />
+            {/* <img className="hero__lukier" src={lukier} alt="lukier" /> */} {/* z tym rozwiazaniem jest taki problem, ze nie zle sie position na telefonie ustawia, w wersji life, testowanym na moim */}
+            <div className="hero__lukier"> {/* w wersji z divem dziala */}
+                <img className="hero__lukier-img" src={lukier} alt="lukier" />
+            </div>
         </div>
 
     );
