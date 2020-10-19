@@ -1,5 +1,9 @@
 @import './App.scss';
 
+.header {
+    height: $navigationHeight; //zmienilem wczoraj zmienna
+}
+
 .navigation {
     position: fixed;
     z-index: 100;
@@ -9,11 +13,12 @@
     justify-content: space-between;
     //: 1rem 0 1rem 0;
     padding: 0rem 1.3rem;
-    height: $navigationHeight;
+    //height: $navigationHeight;
+    height: inherit;
     background-color: $navigationBackground;
 
     @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
-        height: calc(44px + (118 - 44) * ((100vw - 360px) / (1024 - 360)));
+        //height: calc(44px + (118 - 44) * ((100vw - 360px) / (1024 - 360)));
         padding: 0rem calc(13px + (28.44 - 13) * ((100vw - 360px) / (1024 - 360)));
     }
 
