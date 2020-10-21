@@ -1,2 +1,8 @@
 //$navigationHeight: 4.4rem;
-$navigationHeight: calc(44px + (118 - 44) * ((100vw - 360px) / (1024 - 360)));
+//$navigationHeight: calc(44px + (118 - 44) * ((100vw - 360px) / (1024 - 360)));
+
+$navigationHeight: calc(22.5px + (118 - 22.5) * ((100vw - #{$bp-small-portraitWidth}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16}))); //  podzielenie przez 1em jest po to, aby pozbyć się tej wartości, chcę mieć 1024 - 320, więc pozbywam się jednostki następnie, więc mam 64em bez jednostki, bo zmienna wynosi : $bp-large-portraitWidth: 64em; teraz skoro mam 64 potrzebuję dojść do 1024, w przeciwnym wypadku będę miał 64 - 20(po 20em to 320px, analogiczne zastosowanie jest do tego co odjemuje), więć mnoże 64 * 16 oraz 20 * 16 i mam 1024 - 320, te razy 16 bierze się z tego, że mój domyślny 'pixel size' wynosi 16
+
+
+//$navigationHeightLandscape: calc(44px + (118 - 44) * ((100vh - 360px) / (1024 - 360)));
+$navigationHeightLandscape: calc(22.5px + (118 - 22.5) * ((100vh - #{$bp-small-portraitWidth}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
