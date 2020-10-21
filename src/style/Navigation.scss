@@ -2,6 +2,11 @@
 
 .header {
     height: $navigationHeight;
+
+    @media screen and (orientation:landscape) {
+        height: $navigationHeightLandscape;
+        //padding-bottom: 44px;
+    }
 }
 
 .navigation {
@@ -17,28 +22,76 @@
     height: inherit;
     background-color: $navigationBackground;
 
-    @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
+    @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
+        padding: 0rem calc(8.5px + (28.44 - 8.5) * ((100vw - #{$bp-small-portraitWidth}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+    }
+
+    /*     @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
         //height: calc(44px + (118 - 44) * ((100vw - 360px) / (1024 - 360)));
         padding: 0rem calc(13px + (28.44 - 13) * ((100vw - 360px) / (1024 - 360)));
+    }
+ */
+    @media screen and (orientation:landscape) and (min-height : 360px) and (max-height : 1024px) {
+        padding: 0rem calc(13px + (28.44 - 13) * ((100vh - 360px) / (1024 - 360)));
     }
 
     &__logo {
         width: 3.1rem;
         height: 2.9rem;
 
-        @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
+        /*         @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
+            width: calc(20.1px + (68.27 - 20.1) * ((100vw - #{$bp-small-portraitWidth}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            height: calc(18.6px + (64.36 - 18.6) * ((100vw - #{$bp-small-portraitWidth}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        } */
+
+        //#{$bp-small-portraitWidth/1em * 16px}, bo chce zachowac w portrait i landscape takie same, bądź bardzo zbliżone do siebie wartości i tym sposobem są najbardziej zbliżone
+        @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
+            width: calc(31px + (68.27 - 31) * ((100vw - #{$bp-small-portraitWidth/1em * 16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            height: calc(29px + (64.36 - 29) * ((100vw - #{$bp-small-portraitWidth/1em * 16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            /*             width: calc(20.1px + (68.27 - 20.1) * ((100vw - #{$bp-small-portraitWidth}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            height: calc(18.8px + (64.36 - 18.8) * ((100vw - #{$bp-small-portraitWidth}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16}))); */
+        }
+
+        @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
+            width: calc(31px + (68.27 - 31) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            height: calc(29px + (64.36 - 29) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        }
+
+        //68.263, 64.350
+
+        /*         @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
             width: calc(31px + (68.27 - 31) * ((100vw - 360px) / (1024 - 360)));
             height: calc(29px + (64.36 - 29) * ((100vw - 360px) / (1024 - 360)));
-        }
+        } */
+
+        /*         @media screen and (orientation:landscape) and (min-height : 360px) and (max-height : 1024px) {
+            width: calc(31px + (68.27 - 31) * ((100vh - 360px) / (1024 - 360)));
+            height: calc(29px + (64.36 - 29) * ((100vh - 360px) / (1024 - 360)));
+        } */
     }
 
     &__menu {
         width: 2.4rem;
         height: 2.4rem;
 
-        @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
+        @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
+            width: calc(24px + (68.27 - 24) * ((100vw - #{$bp-small-portraitWidth/1em * 16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            height: calc(24px + (64.36 - 24) * ((100vw - #{$bp-small-portraitWidth/1em * 16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
+            width: calc(24px + (68.27 - 24) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            height: calc(24px + (64.36 - 24) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        }
+
+        /*         @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
             width: calc(24px + (68.27 - 24) * ((100vw - 360px) / (1024 - 360)));
             height: calc(24px + (64.36 - 24) * ((100vw - 360px) / (1024 - 360)));
-        }
+        } */
+
+        /*         @media screen and (orientation:landscape) and (min-height : 360px) and (max-height : 1024px) {
+            width: calc(24px + (68.27 - 24) * ((100vh - 360px) / (1024 - 360)));
+            height: calc(24px + (64.36 - 24) * ((100vh - 360px) / (1024 - 360)));
+        } */
     }
 }
