@@ -76,9 +76,20 @@
             border-width: calc(3px + (6 - 3) * ((100vw - 360px) / (1024 - 360)));
         } */
 
-        @media (orientation: landscape) {
-            top: 15%;
+        @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
+            //top:15%;
+            top: 8%;
+
+            width: calc(150px + (360 - 150) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            height: calc(55px + (123 - 55) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            font-size: calc(28px + (70 - 28) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            border-radius: calc(44.5px + (80 - 44.5) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            border-width: calc(3px + (6 - 3) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         }
+
+        /*         @media (orientation: landscape) {
+            top: 15%;
+        } */
     }
 
     &__poster {
@@ -102,17 +113,40 @@
             width: calc(257px + (611.38 - 257) * ((100vw - 360px) / (1024 - 360)));
         } */
 
-        @media (orientation: landscape) {
+        /*         @media (orientation: landscape) {
             top: 32%;
+        } */
+        @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
+            //top: 35%;
+            top: 30%;
+            //top: calc(30% + (75 - 30) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            width: calc(250px + (650 - 250) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            height: calc(100px + (450 - 100) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            /*    width: 250px;
+            height: 100px; */
+            /*             width: 650px;
+            height: 450px; */
         }
     }
 
     &__img {
-        width: 257px;
+        width: 25.7rem;
+
+        /*         width: 250px;
+        height: 100px; */
+
+        /*         width: 650px;
+        height: 450px; */
 
         //Responsive styles
         @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
             width: calc(235.7px + (611.38 - 235.7) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
+            top: 38%;
+            width: calc(250px + (650 - 250) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            height: calc(100px + (450 - 100) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         }
 
         /*         @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
@@ -144,6 +178,19 @@
             font-size: calc(42px + (96 - 42) * ((100vw - 360px) / (1024 - 360)));
         } */
 
+        @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
+
+            width: calc(180px + (500 - 180) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+
+            font-size: calc(30px + (96 - 30) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            /* 
+            font-size: 30px;
+            width: 180px;
+
+            font-size: 96px;
+            width: 500px; */
+        }
+
         span {
             color: black;
         }
@@ -167,6 +214,14 @@
         //Responsive Styles
         @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
             width: calc(279px + (808 - 279) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        //width: 1000px;
+        //330px
+
+        @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
+            top: 79%;
+            width: calc(330px + (1000 - 330) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         }
 
         /*        @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
@@ -199,6 +254,22 @@
             font-size: calc(18px + (47 - 18) * ((100vw - 360px) / (1024 - 360)));
             line-height: calc(18px + (47 - 18) * ((100vw - 360px) / (1024 - 360)));
         } */
+
+        @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
+
+            width: calc(100px + (360 - 100) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            height: calc(35px + (95.5 - 35) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            font-size: calc(14px + (47 - 14) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            line-height: calc(14px + (47 - 14) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+
+            /*             width: 100px;
+            height: 35px;
+            font-size: 14px;
+
+            width: 360px;
+            height: 95.5px;
+            font-size: 47px; */
+        }
     }
 
     &__lukier {
@@ -207,6 +278,10 @@
         width: 100%;
         position: relative; //chyba, ze zakomentuje position relatvie w hero
         top: 97%;
+
+        @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
+            top: 96%;
+        }
 
     }
 
@@ -222,5 +297,8 @@
         /*         @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
             height: calc(77px + (155 - 77) * ((100vw - 360px) / (1024 - 360)));
         } */
+        @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
+            height: calc(65px + (200 - 65) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        }
     }
 }
