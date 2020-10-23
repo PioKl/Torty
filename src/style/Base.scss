@@ -31,20 +31,6 @@ $whiteTransparent: rgba(255, 255, 255, 0.8); */
 /* ==================
     Break Points 
 ====================*/
-//PIXEL SIZE W TYM PROJEKCIE TO 10px nie 16px, WAŻNE (wynika to z font-size: 62.5%;)
-//Portrait width
-/* $bp-small-portraitWidth: 32em; //320px
-$bp-large-portraitWidth: 102.400em; //1024px
-//Portrait height
-$bp-small-portraitHeight: 51.100em; // 511px
-$bp-large-portraitHeight: 136.600em; //1366px
-
-//Landscape width
-$bp-small-landscapeWidth: 27.000em; // 270px
-$bp-large-landscapeWidth: 136.600em; // 1366px
-//Landscape height
-$bp-small-landscapeHeight: 59.800em; // 598px
-$bp-large-landscapeHeight: 102.400em; // 1024px */
 
 //Portrait width
 $bp-small-portraitWidth: 20em; //320px
@@ -65,6 +51,14 @@ $bp-largest-landscapeHeight: 80em; // 1280px
 //37.375em; // 598px
 //35.500em 568px;
 //16.875em; // 270px
+
+//Laptop width
+$bp-small-laptopWidth: 80em; //1280px;
+$bp-medium-laptopWidth: 96em; //1536px
+$bp-large-laptopWidth: 160em; // 2560px;
+
+//120em //1920px
+//160em //2560px
 
 *,
 *::before,
