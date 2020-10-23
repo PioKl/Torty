@@ -5,18 +5,22 @@ import Navigation from './Navigation';
 import Hero from './Hero';
 import Offer from './Offer';
 
+import IsDesktopContextProvider from '../contexts/IsDesktopContext';
+
 function App() {
   return (
-    <div className="App">
-      <header className="header">
-        <Navigation />
-      </header>
-      <main className="main">
-        <Hero />
-        <Offer />
-      </main>
-      <footer className="footer"></footer>
-    </div>
+    <IsDesktopContextProvider>
+      <div className="App">
+        <header className="header">
+          <Navigation />
+        </header>
+        <main className="main">
+          <Hero />
+          <Offer />
+        </main>
+        <footer className="footer"></footer>
+      </div>
+    </IsDesktopContextProvider>
   );
 }
 
