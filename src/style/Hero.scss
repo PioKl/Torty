@@ -12,7 +12,6 @@
 
     position: relative; // rozwiazanie 2
 
-
     @media screen and (orientation:portrait) and (min-width : $bp-medium-portraitWidth) and (max-width : $bp-large-portraitWidth) {
         background-image: url(../images/tłoKwiatyMedium.webp);
     }
@@ -25,6 +24,13 @@
         height: 100%;
         background-image: url(../images/tłoKwiatyMedium.webp);
         background-size: cover;
+    }
+
+    @media screen and (min-width: $bp-small-laptopWidth) {
+        position: static;
+        background-image: none;
+        background-color: #FBEFE9;
+        height: calc(100vh - #{$navigationHeightLaptop})
     }
 
     &__author {
