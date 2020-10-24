@@ -26,12 +26,12 @@
         background-size: cover;
     }
 
-    @media screen and (min-width: $bp-small-laptopWidth) {
+    /*     @media screen and (min-width: $bp-small-laptopWidth) {
         position: static;
         background-image: none;
         background-color: #FBEFE9;
         height: calc(100vh - #{$navigationHeightLaptop})
-    }
+    } */
 
     &__author {
         position: absolute;
@@ -306,5 +306,152 @@
         @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
             height: calc(65px + (200 - 65) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         }
+    }
+}
+
+/*=======================================================
+                    DESKTOP VERSION
+=========================================================*/
+
+
+
+.hero-desktop {
+    height: calc(100vh - #{$navigationHeightLaptop});
+    //background-color: $backgroundDesktop;
+    display: flex;
+    flex-direction: row;
+
+    &__left-side {
+        width: 439px;
+        width: 28.9%;
+        background-color: rgba(248, 199, 199, 0.7);
+    }
+
+    &__right-side {
+        background-color: $backgroundDesktop;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__author {
+        text-align: center;
+        font-family: $fontOne;
+        color: $gold;
+        font-size: 5.6rem;
+        font-weight: 400;
+        //margin-top: 75px;
+        margin-top: 6.4%;
+        //margin-top: 35px;
+        /*         position: relative;
+        top: 6.4%; */
+    }
+
+    &__poster {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 415.73px;
+        height: 146px;
+        border: 1px solid #000000;
+        padding: 10px 40px;
+        margin-top: 78px;
+    }
+
+    &__primaryTitle {
+        font-family: $fontThree;
+        font-size: 48px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    &__barrier {
+        width: 25px;
+        height: 25px;
+        background-color: $gold;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-top: 57px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 245.83px;
+            border-bottom: 2px solid $gold;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-right: 155.3%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        /*         &::after {
+            display: inline-block;
+            content: "";
+            border-top: .2rem solid $gold;
+            width: 245.83px;
+            //15.83px;
+            //transform: translate(20%, 100%);
+            //margin-left: 39.83px;
+            margin-left: 155.3%;
+            transform: translateY(100%);
+        } */
+
+        &::after {
+            content: '';
+            width: 245.83px;
+            border-bottom: 2px solid $gold;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-left: 155.3%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        width: 441px;
+        margin-top: 89px;
+    }
+
+    &__button {
+        @include button(192px, 56px, 24px);
+        border: .3rem solid !important;
+        font-family: $fontThree;
+        font-weight: 400;
+        font-size: 24px;
+        font-style: normal;
+
+        &--check {
+            @extend .button-check;
+        }
+
+        &--contact {
+            @extend .button-contact;
+            border-color: #FFFFFF !important;
+
+            &:hover {
+                border-color: $gold !important;
+            }
+        }
+    }
+
+    &__lukier {
+        position: absolute;
+        top: 94%;
+        width: 100%;
+        //height: 110px;
+    }
+
+    &__lukier-img {
+        width: inherit;
+        height: 151px;
     }
 }
