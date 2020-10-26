@@ -5,6 +5,8 @@ import { IsDesktopContext } from '../contexts/IsDesktopContext';
 import obrazek from "../images/vector.png";
 import lukier from "../images/lukier.png";
 import lukierDesktop from "../images/lukierdesktop.png";
+import kwiatPoster from "../images/fancyplant.png";
+//import kwiatyTransparent from "../images/tłoKwiatyTransparent.png";
 const Hero = () => {
     const { width } = useContext(IsDesktopContext);
     return (
@@ -12,11 +14,13 @@ const Hero = () => {
             {width >= 1280 ?
                 <div className="hero-desktop">
                     <div className="hero-desktop__left-side">
-
+                        <div className="hero-desktop__mainImageContainer"></div>
                     </div>
                     <div className="hero-desktop__right-side">
                         <h1 className="hero-desktop__author">Jane Doe</h1>
+                        {/*                   <img className="hero-desktop__flower" src={kwiatPoster} alt="" /> */}
                         <div className="hero-desktop__poster">
+                            <img className="hero-desktop__flower" src={kwiatPoster} alt="" />
                             <h2 className="hero-desktop__primaryTitle">Torty na wszelkie okazje</h2>
                         </div>
                         <span className="hero-desktop__barrier"></span>
