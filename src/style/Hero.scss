@@ -322,33 +322,74 @@
     flex-direction: row;
 
     &__left-side {
-        width: 439px;
-        width: 28.9%;
-        background-color: rgba(248, 199, 199, 0.7);
+        //width: 439px;
+        // width: 28.9%;
+        width: 453.2px;
+        width: 30%;
+        background-color: $backgroundDesktopLeftSide;
+
+        @include desktopMedium {
+            width: calc(30% + (200 - 30) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        }
+
+        /* @include desktopMedium {
+            width: calc(30% + (200 - 30) * ((100vw - #{strip-unit($bp-medium-laptopWidth*16px)}) / #{strip-unit($bp-large-laptopWidth*16 - $bp-medium-laptopWidth*16)}));
+        } */
+
+
+        /*         @media screen and (min-width:1900px) {
+            width: calc(30% + 4%);
+        } */
+
+        /*         @include desktopMedium {
+            width: calc(30% + (200 - 30) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        }
+ */
+        /*         @media screen and (min-width:$bp-medium-laptopWidth) and (max-width: $bp-large-laptopWidth) {
+            width: calc(453.2px + (1000 - 453.2) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        } */
+
     }
 
     &__mainImageContainer {
         width: 453.2px;
+        width: 100%;
         //width: 128.9%;
-        height: calc(100% - 60px);
+        //width: 133.1%;
+        //height: calc(100% - 60px);
         //height: 100%;
-        background-image: url(../images/tłoKwiatyTransparent.png), linear-gradient(158.59deg, rgba(217, 180, 178, 0) 0%, rgba(249, 148, 98, 0.5) 100%);
-        backdrop-filter: blur(4px);
-        background-repeat: no-repeat;
-        background-size: cover;
-        //margin-left: 58px;
-        left: 13.2%;
-        margin-top: 35px;
-        //top: 13.2%;
+        //height: calc(100% - 8.9%);
+        height: calc(100% - 8.9%);
         position: relative;
+        left: 13.2%;
+        //top: 8.9%;
+        top: 5%;
+        background-image: linear-gradient(158.59deg, rgba(217, 180, 178, 0) 0%, rgba(249, 148, 98, 0.5) 100%);
+        //background-image: url(../images/tłoKwiatyTransparent.png), linear-gradient(158.59deg, rgba(217, 180, 178, 0) 0%, rgba(249, 148, 98, 0.5) 100%);
+        //background-repeat: no-repeat;
+        //background-size: cover;
+        backdrop-filter: blur(4px);
+        //background-size: fill;
+        //background-position: 0 100%;
+
+        //margin-left: 58px;
+        //margin-top: 35px;
+        //margin-top: 60px;
+        //top: 13.2%;
         //z-index: 10;
+    }
+
+    &__mainImage {
+        width: 100%;
+        height: 100%;
     }
 
     &__right-side {
         background-color: $backgroundDesktop;
-        width: 100%;
+        //width: 100%;
         display: flex;
         flex-direction: column;
+        flex: 1 1 auto;
 
         /*         @media screen and (orientation:landscape) and (min-height : 722px) {
             background-color: red;
@@ -368,6 +409,11 @@
         position: relative;
         top: 6.4%;
         //margin-top: 35px;
+        margin-bottom: 35px;
+
+        @include desktopMedium {
+            font-size: calc(56px + (106 - 56) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        }
     }
 
     &__poster {
@@ -385,6 +431,7 @@
         position: relative;
         top: 78px;
         top: 11.7%;
+        //top: 15%;
 
         /*         &:after {
             content: '';
@@ -397,31 +444,47 @@
             background-repeat: no-repeat;
             background-size: cover;
         } */
+
+        @include desktopMedium {
+            width: calc(415.73px + (800 - 415.73) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            height: calc(146px + (303.2 - 146) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        }
     }
 
     &__flower {
         position: absolute;
         left: 82.1%;
         bottom: 68.5%;
+        width: 124px;
+        height: 109px;
+
         //overflow: hidden;
         /*         position: absolute;
         bottom: 61.5%;
         left: 70%;
         z-index: 1; */
+        @include desktopMedium {
+            width: calc(124px + (225 - 124) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            height: calc(109px + (230 - 109) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        }
     }
 
     &__primaryTitle {
+        height: inherit;
         border: 1px solid #000000;
         padding: 10px 40px;
         //margin-top: 78px;
         background-color: inherit;
-
-
         font-family: $fontThree;
         font-size: 48px;
         font-weight: 400;
         text-align: center;
         z-index: 1;
+
+        @include desktopMedium {
+            font-size: calc(48px + (90 - 48) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            padding: calc(10px + (20 - 10) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))) 40px;
+        }
     }
 
     &__barrier {
@@ -435,8 +498,10 @@
         top: 135px;
         top: 20.4%;
 
-
-
+        @include desktopMedium {
+            width: calc(25px + (50 - 25) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            height: calc(25px + (50 - 25) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        }
 
         &::before {
             content: '';
@@ -448,6 +513,11 @@
             margin-right: 155.3%;
             transform: translateY(-50%);
             z-index: 1;
+
+            @include desktopMedium {
+                width: calc(245.83px + (400 - 248.83) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                border-width: calc(2px + (4 - 2) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            }
         }
 
         /*         &::after {
@@ -472,6 +542,11 @@
             margin-left: 155.3%;
             transform: translateY(-50%);
             z-index: 1;
+
+            @include desktopMedium {
+                width: calc(245.83px + (400 - 248.83) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                border-width: calc(2px + (4 - 2) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            }
         }
     }
 
@@ -485,16 +560,27 @@
         top: 224px;
         top: 33.8%;
 
-
+        @include desktopMedium {
+            width: calc(441px + (820 - 441) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        }
     }
 
     &__button {
         @include button(192px, 56px, 24px);
-        border: .3rem solid !important;
+        border: .3rem solid;
         font-family: $fontThree;
         font-weight: 400;
         font-size: 24px;
         font-style: normal;
+
+        @include desktopMedium {
+            width: calc(192px + (350 - 192) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+
+            height: calc(56px + (120 - 56) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+
+            font-size: calc(24px + (46 - 24) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        }
+
 
         &--check {
             @extend .button-check;
@@ -512,13 +598,22 @@
 
     &__lukier {
         position: absolute;
-        top: 94%;
+        top: 93.7%; //94
+        //top: 94%;
         width: 100%;
+
         //height: 110px;
+        @include desktopMedium {
+            top: 94%;
+        }
     }
 
     &__lukier-img {
         width: inherit;
         height: 151px;
+
+        @include desktopMedium {
+            height: calc(151px + (500 - 151) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        }
     }
 }
