@@ -1,0 +1,11 @@
+ @mixin desktopMedium {
+     @media (min-width: #{$bp-medium-laptopWidth}) {
+         @content;
+     }
+ }
+
+ /* @mixin desktopMedium {
+    @media screen and (min-width:#{$bp-medium-laptopWidth}) and (max-width: #{$bp-large-laptopWidth}) {
+        @content;
+    }
+} */
