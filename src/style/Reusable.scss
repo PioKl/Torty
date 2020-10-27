@@ -18,6 +18,10 @@
     @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
         border-width: calc(3px + (6 - 3) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
     }
+
+    @include desktopMedium {
+        border-width: calc(3px + (6 - 3) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+    }
 }
 
 .button-check {
