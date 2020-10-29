@@ -409,9 +409,10 @@
         position: relative;
         top: 6.4%;
         //margin-top: 35px;
-        margin-bottom: 35px;
+        margin-bottom: 1rem;
 
         @include desktopMedium {
+            margin-bottom: 3.5rem;
             font-size: calc(56px + (106 - 56) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
         }
     }
