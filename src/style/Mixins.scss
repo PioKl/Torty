@@ -1,3 +1,9 @@
+ @mixin desktopSmall {
+     @media (min-width: #{$bp-small-laptopWidth}) {
+         @content;
+     }
+ }
+
  @mixin desktopMedium {
      @media (min-width: #{$bp-medium-laptopWidth}) {
          @content;
