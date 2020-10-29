@@ -19,6 +19,10 @@
         border-width: calc(3px + (6 - 3) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
     }
 
+    @include desktopSmall {
+        border-width: .3rem;
+    }
+
     @include desktopMedium {
         border-width: calc(3px + (6 - 3) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
     }
