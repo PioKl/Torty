@@ -12,8 +12,8 @@
 
  @mixin ipadPro {
 
-     @media (min-width: 1366px) and (max-width:1366px),
-     (min-height: 1024px) and (max-height: 1024px) {
+     @media (min-width: #{$bp-large-landscapeWidth}) and (max-width:#{$bp-large-landscapeWidth}),
+     (min-height: #{$bp-large-landscapeHeight}) and (max-height: #{$bp-large-landscapeHeight}) {
          @content;
      }
  }
