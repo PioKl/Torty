@@ -12,13 +12,11 @@
 
     position: relative; // rozwiazanie 2
 
+    /* Responsive Media Queries */
+
     @media screen and (orientation:portrait) and (min-width : $bp-medium-portraitWidth) and (max-width : $bp-large-portraitWidth) {
         background-image: url(../images/tłoKwiatyMedium.webp);
     }
-
-    /*     @media screen and (orientation:portrait) and (min-width : 768px) and (max-width : 1024px) {
-        background-image: url(../images/tłoKwiatyMedium.webp);
-    } */
 
     @media screen and (orientation:landscape) and (min-width: 360px) and (max-height: 1024px) {
         height: 100%;
@@ -26,26 +24,9 @@
         background-size: cover;
     }
 
-    /*     @media screen and (min-width: $bp-small-laptopWidth) {
-        position: static;
-        background-image: none;
-        background-color: #FBEFE9;
-        height: calc(100vh - #{$navigationHeightLaptop})
-    } */
-
     &__author {
         position: absolute;
-        //top: 184px;
-        //top: 28.8%;
         top: 23.8%;
-
-        /*     position: relative;
-        top: 23.5%; */
-        //position: relative; //rozwiazanie 2
-        //top: 23.5%;
-
-
-        //left: 86px;
         left: 50%;
         transform: translateX(-50%);
 
@@ -56,17 +37,15 @@
         font-size: 3.6rem;
         font-family: $fontOne;
         color: $gold;
-        width: 190px;
-        height: 75px;
+        width: 19rem;
+        height: 7.5rem;
         font-weight: 400;
         background: rgba(252, 242, 238, 0.88);
-        border: 3px solid $gold;
-        //box-sizing: border-box;
-        border-radius: 44.5px;
+        border: .3rem solid $gold;
+        border-radius: 4.45rem;
 
-        //Responsive styles
+        /* Responsive Media Queries */
         @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
-            //width: calc(242.5px + (345 - 242.5) * ((100vw - #{$bp-small-portraitWidth}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
             width: calc(180.7px + (345 - 180.7) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
             height: calc(72.2px + (123 - 72.2) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
             font-size: calc(34.4px + (64 - 34.4) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
@@ -74,16 +53,7 @@
             border-width: calc(2.9px + (6 - 2.9) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
         }
 
-        /*         @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
-            width: calc(190px + (345 - 190) * ((100vw - 360px) / (1024 - 360)));
-            height: calc(75px + (123 - 75) * ((100vw - 360px) / (1024 - 360)));
-            font-size: calc(36px + (64 - 36) * ((100vw - 360px) / (1024 - 360)));
-            border-radius: calc(44.5px + (80 - 44.5) * ((100vw - 360px) / (1024 - 360)));
-            border-width: calc(3px + (6 - 3) * ((100vw - 360px) / (1024 - 360)));
-        } */
-
         @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
-            //top:15%;
             top: 8%;
 
             width: calc(150px + (360 - 150) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
@@ -92,59 +62,31 @@
             border-radius: calc(44.5px + (80 - 44.5) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
             border-width: calc(3px + (6 - 3) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         }
-
-        /*         @media (orientation: landscape) {
-            top: 15%;
-        } */
     }
 
     &__poster {
         width: 25.7rem;
         position: absolute;
-        //top: 253px;
         top: 39.5%;
-
-        //position: relative; //rozwiazanie 2
-        //top: 22.5%;
-
         left: 50%;
         transform: translate(-50%);
 
-        //Responsive styles
+        /* Responsive Media Queries */
         @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
             width: calc(235.7px + (611.38 - 235.7) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
         }
 
-        /*         @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
-            width: calc(257px + (611.38 - 257) * ((100vw - 360px) / (1024 - 360)));
-        } */
-
-        /*         @media (orientation: landscape) {
-            top: 32%;
-        } */
         @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
-            //top: 35%;
             top: 30%;
-            //top: calc(30% + (75 - 30) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
             width: calc(250px + (650 - 250) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
             height: calc(100px + (450 - 100) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
-            /*    width: 250px;
-            height: 100px; */
-            /*             width: 650px;
-            height: 450px; */
         }
     }
 
     &__img {
         width: 25.7rem;
 
-        /*         width: 250px;
-        height: 100px; */
-
-        /*         width: 650px;
-        height: 450px; */
-
-        //Responsive styles
+        /* Responsive Media Queries */
         @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
             width: calc(235.7px + (611.38 - 235.7) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
         }
@@ -154,11 +96,6 @@
             width: calc(250px + (650 - 250) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
             height: calc(100px + (450 - 100) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         }
-
-        /*         @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
-            width: calc(257px + (611.38 - 257) * ((100vw - 360px) / (1024 - 360)));
-            //height: 441.57px;
-        } */
     }
 
     &__primaryTitle {
@@ -170,31 +107,21 @@
         font-size: 4.2rem;
         font-family: $fontOne;
         font-weight: 400;
-        width: 235px;
+        width: 23.5rem;
         color: $gold;
 
-        //Responsive Styles
+        /* Responsive Media Queries */
+
         @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
             width: calc(219.1px + (500 - 219.1) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
             font-size: calc(38.8px + (96 - 38.8) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
         }
-
-        /*         @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
-            width: calc(235px + (500 - 235) * ((100vw - 360px) / (1024 - 360)));
-            font-size: calc(42px + (96 - 42) * ((100vw - 360px) / (1024 - 360)));
-        } */
 
         @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
 
             width: calc(180px + (500 - 180) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
 
             font-size: calc(30px + (96 - 30) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
-            /* 
-            font-size: 30px;
-            width: 180px;
-
-            font-size: 96px;
-            width: 500px; */
         }
 
         span {
@@ -205,34 +132,21 @@
     &__buttons {
         display: flex;
         justify-content: space-between;
-        width: 309px;
+        width: 30.9rem;
         position: absolute;
-        //top: 510px;
-        //top: 79.7%;
         top: 83%;
-
-        //position: relative; //rozwiazanie 2
-        //top: 33.3%;
-
         left: 50%;
         transform: translateX(-50%);
 
-        //Responsive Styles
+        /* Responsive Media Queries */
         @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
             width: calc(279px + (808 - 279) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
         }
-
-        //width: 1000px;
-        //330px
 
         @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
             top: 79%;
             width: calc(330px + (1000 - 330) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         }
-
-        /*        @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
-            width: calc(309px + (808 - 309) * ((100vw - 360px) / (1024 - 360)));
-        } */
     }
 
     &__button {
@@ -246,7 +160,8 @@
             @extend .button-contact;
         }
 
-        //Responsive Styles
+        /* Responsive Media Queries */
+
         @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
             width: calc(112.6px + (349 - 112.6) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
             height: calc(43.5px + (106 - 43.5) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
@@ -254,36 +169,21 @@
             line-height: calc(16.3px + (47 - 16.3) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
         }
 
-        /*         @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
-            width: calc(126px + (349 - 126) * ((100vw - 360px) / (1024 - 360)));
-            height: calc(47px + (106 - 47) * ((100vw - 360px) / (1024 - 360)));
-            font-size: calc(18px + (47 - 18) * ((100vw - 360px) / (1024 - 360)));
-            line-height: calc(18px + (47 - 18) * ((100vw - 360px) / (1024 - 360)));
-        } */
-
         @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
 
             width: calc(100px + (360 - 100) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
             height: calc(35px + (95.5 - 35) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
             font-size: calc(14px + (47 - 14) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
             line-height: calc(14px + (47 - 14) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
-
-            /*             width: 100px;
-            height: 35px;
-            font-size: 14px;
-
-            width: 360px;
-            height: 95.5px;
-            font-size: 47px; */
         }
     }
 
     &__lukier {
-        //position: absolute; //jakz robie relative nie wyjdzie, bo bedzie liczony wzgledem jego pierwotnej pozycji, a na ekranie telefonu to sie troche rozni niz w testowaniu
-        //top: 97.3%;
         width: 100%;
-        position: relative; //chyba, ze zakomentuje position relatvie w hero
+        position: relative;
         top: 97%;
+
+        /* Responsive Media Queries */
 
         @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
             top: 96%;
@@ -295,14 +195,12 @@
         width: 100%;
         height: 7.7rem;
 
-        //Responsive Styles
+        /* Responsive Media Queries */
+
         @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width : $bp-large-portraitWidth) {
             height: calc(72.4px + (155 - 72.4) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
         }
 
-        /*         @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
-            height: calc(77px + (155 - 77) * ((100vw - 360px) / (1024 - 360)));
-        } */
         @media screen and (orientation:landscape) and (min-height : $bp-small-landscapeHeight) and (max-height : $bp-large-landscapeHeight) {
             height: calc(65px + (200 - 65) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         }
@@ -323,11 +221,10 @@
     flex-direction: row;
 
     &__left-side {
-        //width: 439px;
-        // width: 28.9%;
-        width: 453.2px;
         width: 30%;
         background-color: $backgroundDesktopLeftSide;
+
+        /* Responsive Media Queries */
 
         @include ipadPro {
             width: 35%;
@@ -336,52 +233,16 @@
         @include desktopMedium {
             width: calc(30% + (200 - 30) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
         }
-
-        /* @include desktopMedium {
-            width: calc(30% + (200 - 30) * ((100vw - #{strip-unit($bp-medium-laptopWidth*16px)}) / #{strip-unit($bp-large-laptopWidth*16 - $bp-medium-laptopWidth*16)}));
-        } */
-
-
-        /*         @media screen and (min-width:1900px) {
-            width: calc(30% + 4%);
-        } */
-
-        /*         @include desktopMedium {
-            width: calc(30% + (200 - 30) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
-        }
- */
-        /*         @media screen and (min-width:$bp-medium-laptopWidth) and (max-width: $bp-large-laptopWidth) {
-            width: calc(453.2px + (1000 - 453.2) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
-        } */
-
     }
 
     &__mainImageContainer {
-        width: 453.2px;
         width: 100%;
-        //width: 128.9%;
-        //width: 133.1%;
-        //height: calc(100% - 60px);
-        //height: 100%;
-        //height: calc(100% - 8.9%);
         height: calc(100% - 8.9%);
         position: relative;
         left: 13.2%;
-        //top: 8.9%;
         top: 5%;
         background-image: linear-gradient(158.59deg, $heroGradientColorOne 0%, $heroGradientColorTwo 100%);
-        //background-image: url(../images/tłoKwiatyTransparent.png), linear-gradient(158.59deg, rgba(217, 180, 178, 0) 0%, rgba(249, 148, 98, 0.5) 100%);
-        //background-repeat: no-repeat;
-        //background-size: cover;
         backdrop-filter: blur(4px);
-        //background-size: fill;
-        //background-position: 0 100%;
-
-        //margin-left: 58px;
-        //margin-top: 35px;
-        //margin-top: 60px;
-        //top: 13.2%;
-        //z-index: 10;
     }
 
     &__mainImage {
@@ -391,14 +252,9 @@
 
     &__right-side {
         background-color: $backgroundDesktop;
-        //width: 100%;
         display: flex;
         flex-direction: column;
         flex: 1 1 auto;
-
-        /*         @media screen and (orientation:landscape) and (min-height : 722px) {
-            background-color: red;
-        } */
     }
 
     &__author {
@@ -407,14 +263,11 @@
         color: $gold;
         font-size: 5.6rem;
         font-weight: 400;
-        //margin-top: 75px;
-        // margin-top: 6.4%;
-
-        //margin-top: 35px;
         position: relative;
         top: 6.4%;
-        //margin-top: 35px;
         margin-bottom: 1rem;
+
+        /* Responsive Media Queries */
 
         @include ipadPro {
             top: 12.8%;
@@ -433,35 +286,18 @@
         justify-content: center;
         flex-wrap: wrap;
         align-content: center;
-        width: 415.73px;
-        height: 146px;
-        //border: 1px solid #000000;
-        //padding: 10px 40px;
-        //margin-top: 78px;
+        width: 41.573rem;
+        height: 14.6rem;
         background-color: inherit;
         position: relative;
-        top: 78px;
         top: 11.7%;
-        //top: 15%;
-        /*         position: absolute;
-        top: 48%;
-        transform: translateY(-48%); */
 
-        /*         &:after {
-            content: '';
-            width: 124px;
-            height: 109px;
-            position: absolute;
-            bottom: 68.5%;
-            left: 82.1%;
-            background-image: url(../images/fancyplant.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-        } */
+        /* Responsive Media Queries */
+
         @include ipadPro {
             top: 20%;
-            width: 500px;
-            height: 200px;
+            width: 50rem;
+            height: 20rem;
         }
 
         @include desktopMedium {
@@ -474,14 +310,11 @@
         position: absolute;
         left: 82.1%;
         bottom: 68.5%;
-        width: 124px;
-        height: 109px;
+        width: 12.4rem;
+        height: 10.9rem;
 
-        //overflow: hidden;
-        /*         position: absolute;
-        bottom: 61.5%;
-        left: 70%;
-        z-index: 1; */
+        /* Responsive Media Queries */
+
         @include ipadPro {
             width: 15rem;
             height: 15rem;
@@ -496,14 +329,15 @@
     &__primaryTitle {
         height: inherit;
         border: 1px solid #000000;
-        padding: 10px 40px;
-        //margin-top: 78px;
+        padding: 1rem 4rem;
         background-color: inherit;
         font-family: $fontThree;
-        font-size: 48px;
+        font-size: 4.8rem;
         font-weight: 400;
         text-align: center;
         z-index: 1;
+
+        /* Responsive Media Queries */
 
         @include ipadPro {
             font-size: 5.6rem;
@@ -517,15 +351,15 @@
     }
 
     &__barrier {
-        width: 25px;
-        height: 25px;
+        width: 2.5rem;
+        height: 2.5rem;
         background-color: $gold;
         border-radius: 50%;
         margin: 0 auto;
-        //margin-top: 57px;
         position: relative;
-        top: 135px;
         top: 20.4%;
+
+        /* Responsive Media Queries */
 
         @include ipadPro {
             top: 28.7%;
@@ -540,14 +374,16 @@
 
         &::before {
             content: '';
-            width: 245.83px;
-            border-bottom: 2px solid $gold;
+            width: 24.583rem;
+            border-bottom: .2rem solid $gold;
             position: absolute;
             right: 0;
             top: 50%;
             margin-right: 155.3%;
             transform: translateY(-50%);
             z-index: 1;
+
+            /* Responsive Media Queries */
 
             @include ipadPro {
                 border-width: .3rem;
@@ -559,21 +395,9 @@
             }
         }
 
-        /*         &::after {
-            display: inline-block;
-            content: "";
-            border-top: .2rem solid $gold;
-            width: 245.83px;
-            //15.83px;
-            //transform: translate(20%, 100%);
-            //margin-left: 39.83px;
-            margin-left: 155.3%;
-            transform: translateY(100%);
-        } */
-
         &::after {
             content: '';
-            width: 245.83px;
+            width: 24.583rem;
             border-bottom: 2px solid $gold;
             position: absolute;
             left: 0;
@@ -581,6 +405,8 @@
             margin-left: 155.3%;
             transform: translateY(-50%);
             z-index: 1;
+
+            /* Responsive Media Queries */
 
             @include ipadPro {
                 border-width: .3rem;
@@ -597,20 +423,16 @@
         display: flex;
         justify-content: space-between;
         align-self: center;
-        width: 441px;
-        //margin-top: 89px;
+        width: 44.1rem;
         position: relative;
-        top: 224px;
         top: 33.8%;
+
+        /* Responsive Media Queries */
 
         @include ipadPro {
             top: 42.1%;
             width: 55rem;
         }
-
-
-        /*         position: absolute;
-        top: 80.8%; */
 
         @include desktopMedium {
             width: calc(441px + (820 - 441) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
@@ -622,8 +444,10 @@
         border: .3rem solid;
         font-family: $fontThree;
         font-weight: 400;
-        font-size: 24px;
+        font-size: 2.4rem;
         font-style: normal;
+
+        /* Responsive Media Queries */
 
         @include ipadPro {
             width: 23rem;
@@ -656,11 +480,11 @@
 
     &__lukier {
         position: absolute;
-        top: 93.7%; //94
-        //top: 94%;
+        top: 93.7%;
         width: 100%;
 
-        //height: 110px;
+        /* Responsive Media Queries */
+
         @include ipadPro {
             top: 94.5%;
         }
@@ -672,7 +496,9 @@
 
     &__lukier-img {
         width: inherit;
-        height: 151px;
+        height: 15.1rem;
+
+        /* Responsive Media Queries */
 
         @include desktopMedium {
             height: calc(151px + (480 - 151) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
