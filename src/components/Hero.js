@@ -15,14 +15,13 @@ const Hero = () => {
                 <div className="hero-desktop">
                     <div className="hero-desktop__left-side">
                         <div className="hero-desktop__mainImageContainer">
-                            <img className="hero-desktop__mainImage" src={kwiatyTransparent} alt="" />
+                            <img className="hero-desktop__mainImage" src={kwiatyTransparent} alt="tort z kwiatami" />
                         </div>
                     </div>
                     <div className="hero-desktop__right-side">
                         <h1 className="hero-desktop__author">Jane Doe</h1>
-                        {/*                   <img className="hero-desktop__flower" src={kwiatPoster} alt="" /> */}
                         <div className="hero-desktop__poster">
-                            <img className="hero-desktop__flower" src={kwiatPoster} alt="" />
+                            <img className="hero-desktop__flower" src={kwiatPoster} alt="kwiat" />
                             <h2 className="hero-desktop__primaryTitle">Torty na wszelkie okazje</h2>
                         </div>
                         <span className="hero-desktop__barrier"></span>
@@ -32,7 +31,7 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className="hero-desktop__lukier">
-                        <img src={lukierDesktop} alt="" className="hero-desktop__lukier-img" />
+                        <img src={lukierDesktop} alt="lukier" className="hero-desktop__lukier-img" />
                     </div>
 
                 </div>
@@ -43,7 +42,7 @@ const Hero = () => {
             </div> */}
                     <h2 className="hero__author">Jane Doe</h2>
                     <div className="hero__poster">
-                        <img src={obrazek} alt="" className="hero__img" />
+                        <img src={obrazek} alt="tort z kwiatami" className="hero__img" />
                         <h1 className="hero__primaryTitle"><span>Torty</span> na wszelkie okazje</h1>
                     </div>
                     {/* <img src={obrazek} alt="" /> */}
