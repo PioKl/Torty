@@ -11,6 +11,8 @@
     border: .3rem solid;
     cursor: pointer;
 
+    /* Responsive Media Queries */
+
     @media screen and (orientation:portrait) and (min-width : 360px) and (max-width : 1024px) {
         border-width: calc(3px + (6 - 3) * ((100vw - 360px) / (1024 - 360)));
     }
