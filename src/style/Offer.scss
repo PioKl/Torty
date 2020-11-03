@@ -1,3 +1,121 @@
+@import './App.scss';
+
 .offer {
-    height: 100vh;
+    height: auto;
+    background-color: $backgroundOffer;
+    display: flex;
+    flex-direction: column;
+    //position: relative; //do 2 sposobu
+
+    &__section-title {
+        margin-top: 138px;
+        margin-bottom: 90px;
+        position: relative;
+        left: 94.7%;
+        transform: translate(-94.7%);
+        @include sectionTitleOne(Oferta);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0rem 1.3rem 9.7rem 1.3rem;
+        gap: 16px;
+        position: relative;
+    }
+
+    &__left-side {
+        width: 100%;
+    }
+
+    &__img {
+        min-width: 100%;
+    }
+
+    &__right-side {
+        width: 100%;
+        border: 1px solid $gold;
+        background-color: $backgroundOfferCakes;
+        border-radius: 5px;
+    }
+
+    &__offers-list {
+        font-size: 14px;
+        font-weight: 700;
+        font-family: $fontOne;
+        padding: 32px 14px;
+    }
+
+    &__cake {
+        padding-bottom: 3px;
+
+        &--title {
+            display: flex;
+            align-items: center;
+
+            &:before {
+                //display: inline-block;
+                //vertical-align: middle;
+                content: ' ';
+                background-image: url('../images/birthdayCakeIcon.svg');
+                background-size: 16px 16px;
+                height: 16px;
+                width: 16px;
+                margin-right: 7px;
+            }
+        }
+
+        &--normal {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 20px;
+            //padding-left: 40px;
+
+            &:before {
+                content: ' ';
+                background-image: url('../images/normalCakeIcon.svg');
+                background-size: 16px 16px;
+                height: 16px;
+                width: 16px;
+                margin-right: 7px;
+            }
+        }
+    }
 }
+
+
+/* .offer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+
+    &__section-title {
+        //position: absolute;
+        //top: 0%;
+        //right: 3%;
+       // margin-top: 11rem;
+       // @include sectionTitleOne(Oferta);
+
+        //h1 {
+        //    position: relative;
+        //    font-size: inherit;
+        //    font-weight: inherit;
+        //    z-index: 10;
+        //}
+    }
+
+    &__left-side {
+        width: 100%;
+    }
+
+    &__right-side {
+        width: 100%;
+    }
+} */
