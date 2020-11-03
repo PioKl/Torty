@@ -1,9 +1,38 @@
 import React from 'react';
 import '../style/Offer.scss';
+import kucharz from "../images/kucharzMobile.png";
 const Offer = () => {
     return ( 
         <div className="offer">
-            <h1>Oferta</h1>
+            <div className="offer__section-title"></div>
+            <div className="offer__content">
+{/*                 <div className="offer__section-title">
+                </div> */}
+                <div className="offer__left-side">
+                    <img className="offer__img" src={kucharz} alt=""/>
+                </div>
+                <div className="offer__right-side">
+                    <ul className="offer__offers-list">
+                        <ul className="offer__cakes-list">
+                            <li className="offer__cake offer__cake--title">Torty</li>
+                            <li className="offer__cake offer__cake--normal">zwykłe</li>
+                            <li className="offer__cake offer__cake--wedding">weselne</li>
+                            <li className="offer__cake offer__cake--thematic">tematyczne</li>
+                        </ul>
+                        <ul className="offer__commonCakes-list">
+                            <li className="offer__commonCake offer__commonCake--title">Ciasta</li>
+                            <li className="offer__commonCake offer__commonCake--traditional">tradycyjne</li>
+                            <li className="offer__commonCake offer__commonCake--dessert">deserowe</li>
+                        </ul>
+                        <ul className="offer__cupCakes-list">
+                            <li className="offer__cupCake offer__cupCake--title">Babeczki</li>
+                        </ul>
+                        <ul className="offer__occasional-list">
+                            <li className="offer__occasional offer__occasional--title">Wyroby okazjonalne</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
         </div>
      );
 }
