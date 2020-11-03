@@ -17,3 +17,9 @@
          @content;
      }
  }
+
+ @mixin mobilePortrait {
+     @media screen and (orientation:portrait) and (min-width : #{$bp-small-portraitWidth}) and (max-width : #{$bp-large-portraitWidth}) {
+         @content
+     }
+ }
