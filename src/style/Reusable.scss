@@ -53,3 +53,27 @@
         color: $gold;
     }
 }
+
+@mixin sectionTitleOne($title) {
+    width: 188px;
+    height: 55px;
+    font-size: 36px;
+    font-family: $fontOne;
+    background-color: white;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+
+    &::before {
+        content: "#{$title}";
+        width: 188px;
+        height: 55px;
+        background-color: $gold;
+        position: absolute;
+        left: 5%;
+        bottom: 15%;
+        /*         top: 50%;
+        margin-right: 155.3%;
+        transform: translateY(-50%); */
+    }
+}
