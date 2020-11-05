@@ -1,5 +1,7 @@
 @import './App.scss';
-$spaceBetweenIcons: 3px;
+//$spaceBetweenIcons: 3px;
+$spaceBetweenIcons: calc(2.7px + (9 - 2.7) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+$iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
 
 .offer {
     height: auto;
@@ -16,6 +18,11 @@ $spaceBetweenIcons: 3px;
         left: 94.7%;
         transform: translate(-94.7%);
         @include sectionTitleOne(Oferta);
+
+        @include mobilePortrait {
+            margin-top: calc(132.6px + (229 - 132.6) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            margin-bottom: calc(23.9px + (79 - 23.9) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
     }
 
     &__content {
@@ -26,8 +33,15 @@ $spaceBetweenIcons: 3px;
         width: 100%;
         //padding: 0rem 1.3rem 9.7rem 1.3rem;
         padding: 0rem 1.3rem 65.6px 1.3rem;
+        //padding: 0rem 3.6rem 65.6px 3.6rem;
         gap: 16px;
         position: relative;
+
+        @include mobilePortrait {
+            padding-left:calc(11.7px + (36 - 11.7) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            padding-right:calc(11.7px + (36 - 11.7) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            gap: calc(14.3px + (46 - 14.3) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
 
         /*         &:after {
             content: '';
@@ -54,6 +68,10 @@ $spaceBetweenIcons: 3px;
         border: 1px solid $gold;
         background-color: $backgroundOfferCakes;
         border-radius: 5px;
+
+        @include mobilePortrait {
+            border-radius: calc(5px + (10 - 5) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
     }
 
     &__offers-list {
@@ -63,6 +81,16 @@ $spaceBetweenIcons: 3px;
         //padding: 32px 14px;
         padding: 16px 0;
         padding-left: 14px;
+
+        @include mobilePortrait {
+            font-size: calc(12.7px + (36 - 12.7) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            padding: calc(15.6px + (24 - 15.6) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16}))) 0;
+            padding-left: calc(12.2px + (44 - 12.2) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width: $bp-small-portraitWidth) {
+            font-size: .9rem;
+        }
     }
 
     /* 
@@ -77,12 +105,17 @@ $spaceBetweenIcons: 3px;
         display: block;
         margin: 0 auto;
         margin-top: 5px;
-        margin-bottom: 5px + $spaceBetweenIcons;
+        margin-bottom: calc(5px + #{$spaceBetweenIcons});
         width: 3px;
         height: 3px;
         background-color: $gold;
         border-radius: 50%;
         position: relative;
+
+        @include mobilePortrait {
+            width: calc(2.6px + (11 - 2.6) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            height: calc(2.6px + (11 - 2.6) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
 
         //margin-bottom: 10px;
         &::before {
@@ -95,6 +128,19 @@ $spaceBetweenIcons: 3px;
             margin-right: 155.3%;
             transform: translateY(-50%);
             z-index: 1;
+
+            @include mobilePortrait {
+                width: calc(49.9px + (180 - 49.9) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+
+                border-width: calc(.94px + (2 - .94) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            }
+
+            @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width: $bp-small-portraitWidth) {
+                width: 4rem;
+            }
+
+            //192.87
+            //border 2px
         }
 
         &::after {
@@ -107,6 +153,16 @@ $spaceBetweenIcons: 3px;
             margin-left: 155.3%;
             transform: translateY(-50%);
             z-index: 1;
+
+            @include mobilePortrait {
+                width: calc(49.9px + (180 - 49.9) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+
+                border-width: calc(.94px + (2 - .94) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            }
+
+            @media screen and (orientation:portrait) and (min-width : $bp-small-portraitWidth) and (max-width: $bp-small-portraitWidth) {
+                width: 4rem;
+            }
         }
     }
 
@@ -114,11 +170,16 @@ $spaceBetweenIcons: 3px;
         padding-bottom: $spaceBetweenIcons;
 
         &:before {
+            //16px width i height
             content: '';
-            background-size: 16px 16px;
-            height: 16px;
-            width: 16px;
+            background-size: $iconSize $iconSize;
+            height: $iconSize;
+            width: $iconSize;
             margin-right: 7px;
+
+            @include mobilePortrait {
+                margin-right: calc(6.4px + (17 - 6.4) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            }
         }
 
         &--icon {
@@ -128,6 +189,10 @@ $spaceBetweenIcons: 3px;
 
         &--item {
             padding-left: 40px;
+
+            @include mobilePortrait {
+                padding-left: calc(31.9px + (140 - 31.9) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            }
         }
     }
 
@@ -185,6 +250,10 @@ $spaceBetweenIcons: 3px;
             background-image: url('../svg/cupCakeIcon.svg');
             position: relative;
             bottom: 2px;
+
+            @include mobilePortrait {
+                bottom: calc(1px + (8 - 1) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            }
         }
     }
 
@@ -197,6 +266,10 @@ $spaceBetweenIcons: 3px;
     &__wave {
         //width: 100%;
         height: 51px;
+
+        @include mobilePortrait {
+            height: calc(45.2px + (148 - 45.2) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
     }
 
     &__wave-img {
