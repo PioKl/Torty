@@ -61,17 +61,27 @@
     font-family: $fontOne;
     background-color: white;
     color: white;
-    text-align: center;
+    //text-align: center;
     font-weight: 400;
+
+    @include mobilePortrait {
+        width: calc(170.2px + (484.39 - 170.2) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        height: calc(50.7px + (127.46 - 50.7) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        font-size: calc(33.9px + (72 - 33.9) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+    }
 
     &::before {
         content: "#{$title}";
-        width: 188px;
-        height: 55px;
+        width: inherit;
+        height: inherit;
         background-color: $gold;
         position: absolute;
         left: 5%;
         bottom: 15%;
+        //Wyrównanie tekstu
+        display: flex;
+        align-items: center;
+        justify-content: center;
         /*         top: 50%;
         margin-right: 155.3%;
         transform: translateY(-50%); */
