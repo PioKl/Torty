@@ -70,6 +70,12 @@
         font-size: calc(33.9px + (72 - 33.9) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
     }
 
+    @include mobileLandscape {
+        font-size: calc(30px + (46 - 30) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        width: calc(188px + (271 - 188) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        height: calc(55px + (75 - 55) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+    }
+
     &::before {
         content: "#{$title}";
         width: inherit;
