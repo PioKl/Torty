@@ -1,16 +1,85 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import '../style/Offer.scss';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { IsDesktopContext } from '../contexts/IsDesktopContext';
 import kucharz from "../images/kucharzMobile.png";
-/* import { ReactComponent as OfferWave } from '../svg/offerWave.svg'; */
 import offerWave from "../images/offerWave.png";
+import Slider from "react-slick";
+
 
 const Offer = () => {
+    const { width } = useContext(IsDesktopContext);
+
+/*     const settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,  
+      }; */
+      const settings = {
+        slidesToShow: 3,
+        centerMode: true,
+        centerPadding: "0px",
+        speed: 500,
+      };
+
     return ( 
+        <>
+        {width >= 1280 ? 
+            <div className="offer-desktop">
+                <div className="offer-desktop__left-side">
+                    <img className="offer-desktop__img" src={kucharz} alt=""/>
+                </div>
+                <div className="offer-desktop__right-side">
+                    <div className="offer-desktop__section-title">
+
+                    </div>
+                    <div className="offer-desktop__offers-container">
+                    <Slider className="offer-desktop__offers-slider" {...settings}>
+                        <div className="offer-desktop__slider-item">
+                            <div className="offer-desktop__cake offer-desktop__specialCake"></div>
+                            <h2 className="offer-desktop__cake-title offer-desktop__specialCake-title">Torty</h2>
+                            <div className="offer-desktop__details">
+                                <div className="offer-desktop__detail offer-desktop__detail--specialCakeNormal">
+                                    <div className="offer-desktop__detail-icon offer-desktop__detail-icon--specialCakeNormal"></div>
+                                    <h3 className="offer-desktop__detail-title offer-desktop__detail-title-specialCakeNormal">zwykłe</h3>
+                                </div>
+                                <div className="offer-desktop__detail offer-desktop__detail--specialCakeThematic">
+                                    <div className="offer-desktop__detail-icon offer-desktop__detail-icon--specialCakeThematic"></div>
+                                    <h3 className="offer-desktop__detail-title offer-desktop__detail-title-specialCakeThematic">tematyczne</h3>
+                                </div>
+                                <div className="offer-desktop__detail offer-desktop__detail--specialCakeWedding">
+                                    <div className="offer-desktop__detail-icon offer-desktop__detail-icon--specialCakeWedding"></div>
+                                    <h3 className="offer-desktop__detail-title offer-desktop__detail-title-specialCakeWedding">weselne</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="offer-desktop__slider-item">
+                            <div className="offer-desktop__cake offer-desktop__commonCake"></div>
+                            <h2 className="offer-desktop__cake-title offer-desktop__commonCake-title">Ciasta</h2>
+                        </div>
+                        <div className="offer-desktop__slider-item">
+                            <div className="offer-desktop__cake offer-desktop__cupCake"></div>
+                            <h2 className="offer-desktop__cake-title offer-desktop__cupCake-title">Babeczki</h2>
+                        </div>
+                        <div className="offer-desktop__slider-item">
+                            <div className="offer-desktop__cake offer-desktop__occasional"></div>
+                            <h2 className="offer-desktop__cake-title offer-desktop__occasional-title">Wyroby okazjonalne</h2>
+                        </div>
+
+                    </Slider>
+                    </div>
+                </div>
+            <div className="offer-desktop__wave">
+                    <img src={offerWave} alt="" className="offer-desktop__wave-img"/>
+                </div>
+            </div>
+            :
         <div className="offer">
             <div className="offer__section-title"></div>
             <div className="offer__content">
-{/*                 <div className="offer__section-title">
-                </div> */}
                 <div className="offer__left-side">
                     <img className="offer__img" src={kucharz} alt=""/>
                 </div>
@@ -39,11 +108,12 @@ const Offer = () => {
                     </ul>
                 </div>
             </div>
-            {/* <OfferWave className="offer__wave"/> */}
             <div className="offer__wave">
                 <img src={offerWave} alt="" className="offer__wave-img"/>
             </div>
         </div>
+        }
+        </>
      );
 }
  
