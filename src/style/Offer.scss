@@ -310,3 +310,301 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
         background-color: $backgroundOffer;
     }
 }
+
+
+/* ============================================================================================================
+                                                    Desktop
+=============================================================================================================== */
+
+.offer-desktop {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: $backgroundDesktop;
+    position: relative;
+
+
+
+    &__left-side {
+        width: 30%;
+        background: $backgroundDesktopOfferLeftSide;
+
+        /* Responsive Media Queries */
+
+        @include ipadPro {
+            width: 35%;
+        }
+
+        @include desktopMedium {
+            width: calc(30% + (200 - 30) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        }
+    }
+
+    &__img {
+        width: 249px;
+        height: 269px;
+        //margin-top: 323px;
+        margin-top: 323px - 50px;
+        margin-left: 116px;
+    }
+
+    &__right-side {
+        background: $backgroundDesktopOfferRightSide;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+    }
+
+    &__section-title {
+        margin-top: 103px;
+        //margin-bottom: 109.71px;
+        margin-bottom: 50px;
+        position: relative;
+        left: 97.8%;
+        transform: translate(-97.8%);
+        @include sectionTitleOne(Oferta);
+    }
+
+    &__offers-container {
+        width: 648.14px;
+        height: 348.09px;
+        margin-left: 121px;
+        background: #FEF7F7;
+        border: 1px solid #C19D56;
+        box-sizing: border-box;
+        border-radius: 38px;
+    }
+
+    &__offers-slider {
+        margin-top: 17.33px;
+    }
+
+    &__slider-item {
+        position: relative;
+        z-index: 50;
+        height: 348.09px; //height containera
+    }
+
+    &__cake {
+        width: 103.17px !important;
+        height: 100.41px !important;
+        background: #F8E1E9;
+        border: 3px solid #C19D56;
+        border-radius: 50%;
+        filter: blur(3px);
+        //margin: 0 auto;
+        margin: 5px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__specialCake {
+        &:after {
+            content: '';
+            background-image: url('../svg/birthdayCakeIcon.svg');
+            background-size: 66.36px 61.84px;
+            width: 66.36px;
+            height: 61.84px;
+        }
+    }
+
+    &__commonCake {
+        &:after {
+            content: '';
+            background-image: url('../svg/commonCakeIcon.svg');
+            background-size: 73px 89.39px;
+            width: 73px;
+            height: 89.39px;
+        }
+    }
+
+    &__cupCake {
+        &:after {
+            content: '';
+            background-image: url('../svg/cupCakeIcon.svg');
+            background-size: 68.17px 82.65px;
+            width: 68.17px;
+            height: 82.65px;
+        }
+    }
+
+    &__occasional {
+        &:after {
+            content: '';
+            background-image: url('../svg/occasionalCakeIcon.svg');
+            background-size: 68.17px 82.65px;
+            width: 68.17px;
+            height: 82.65px;
+        }
+    }
+
+    &__cake-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 12.99px auto 20.39px auto;
+        width: 194px;
+        height: 56px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: $fontOne;
+        font-weight: normal;
+        font-size: 32px;
+        color: black;
+        visibility: hidden;
+    }
+
+    &__cupCake-title,
+    &__occasional-title {
+        margin-top: 61.5px;
+    }
+
+    &__occasional-title {
+        width: 100%;
+        font-size: 26px;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: row;
+        visibility: hidden;
+    }
+
+    &__detail {
+
+        &--specialCakeNormal {
+            /*             position: relative;
+            right: 68px; */
+            z-index: 60;
+
+            position: absolute;
+            right: 114%;
+        }
+
+        &--specialCakeThematic {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        &--specialCakeWedding {
+            position: absolute;
+            z-index: 60;
+            left: 114%;
+        }
+    }
+
+    &__detail-icon {
+        width: 88.2px;
+        height: 83.48px;
+        background: #F8E1E9;
+        border: 3px solid #C19D56;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:after {
+            content: '';
+        }
+
+        &--specialCakeNormal {
+            &:after {
+                background-image: url('../svg/normalCakeIcon.svg');
+                background-size: 53.05px 60.49px;
+                width: 53.05px;
+                height: 60.49px;
+            }
+        }
+
+        &--specialCakeThematic {
+            &:after {
+                background-image: url('../svg/thematicCakeIcon.svg');
+                background-size: 44.89px 59.85px;
+                width: 44.89px;
+                height: 59.85px;
+            }
+        }
+
+        &--specialCakeWedding {
+            &:after {
+                background-image: url('../svg/weddingCakeIcon.svg');
+                background-size: 52.76px 59.85px;
+                width: 52.76px;
+                height: 59.85px;
+            }
+        }
+    }
+
+    &__detail-title {
+        text-align: center;
+        font-family: $fontOne;
+        font-size: 30px;
+        font-weight: normal;
+    }
+
+    &__wave {
+        position: absolute;
+        top: 92.5%;
+        width: 100%;
+    }
+
+    &__wave-img {
+        width: 100%;
+        height: 57px;
+    }
+}
+
+/* REACT SLICT MODYFIKACJE  */
+
+.slick-current .offer-desktop__slider-item .offer-desktop__cake {
+    filter: blur(0);
+}
+
+.slick-current .offer-desktop__slider-item .offer-desktop__cake+.offer-desktop__cake-title {
+    visibility: visible;
+}
+
+.slick-current .offer-desktop__slider-item .offer-desktop__cake+.offer-desktop__cake-title+.offer-desktop__details {
+    visibility: visible;
+}
+
+.slick-slide div {
+    //usuniecie czarnego zaznaczenia
+    outline: none;
+}
+
+/* .spr {
+    padding: 4px;
+} */
+
+/* .slider {
+    width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.slider .slide {
+    padding: 40px;
+}
+
+.slider .slide .child-element {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background: red;
+    width: 100%;
+    height: 70px;
+}
+
+.slider .slide.slick-center .child-element {
+    background: rebeccapurple;
+    -webkit-transform: translate(-70px, 0px);
+    transform: translate(-70px, 0px);
+    width: calc(100% + 140px);
+    max-width: initial;
+} */
