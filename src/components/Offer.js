@@ -59,6 +59,18 @@ const Offer = () => {
                         <div className="offer-desktop__slider-item">
                             <div className="offer-desktop__cake offer-desktop__commonCake"></div>
                             <h2 className="offer-desktop__cake-title offer-desktop__commonCake-title">Ciasta</h2>
+                            <div className="offer-desktop__details offer-desktop__details--commonCake">
+                                <div className="offer-desktop__detail offer-desktop__detail--commonCakeTraditional">
+                                    <div className="offer-desktop__detail-icon offer-desktop__detail-icon--commonCakeTraditional"></div>
+                                    <h3 className="offer-desktop__detail-title offer-desktop__detail-title-commonCakeTraditional">tradycyjne</h3>
+                                </div>
+                                <div className="offer-desktop__detail offer-desktop__detail--commonCakeDessert">
+                                    <div className="offer-desktop__detail-icon offer-desktop__detail-icon--commonCakeDessert"></div>
+                                    <h3 className="offer-desktop__detail-title offer-desktop__detail-title-commonCakeDessert">
+                                        deserowe
+                                    </h3>
+                                </div>
+                            </div>
                         </div>
                         <div className="offer-desktop__slider-item">
                             <div className="offer-desktop__cake offer-desktop__cupCake"></div>
