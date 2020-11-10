@@ -472,6 +472,13 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
         visibility: hidden;
     }
 
+    &__details {
+        &--commonCake {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
     &__detail {
 
         &--specialCakeNormal {
@@ -493,6 +500,20 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
             position: absolute;
             z-index: 60;
             left: 114%;
+        }
+
+        &--commonCakeTraditional {
+            position: relative;
+            right: 15%;
+            /*  position: absolute;
+            right: 65%; */
+        }
+
+        &--commonCakeDessert {
+            position: relative;
+            left: 10%;
+            /*   position: absolute;
+            left: 70%; */
         }
     }
 
@@ -537,6 +558,24 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
                 height: 59.85px;
             }
         }
+
+        &--commonCakeTraditional {
+            &:after {
+                background-image: url('../svg/traditionalCakeIcon.svg');
+                background-size: 56px 59.85px;
+                width: 56px;
+                height: 59.85px;
+            }
+        }
+
+        &--commonCakeDessert {
+            &:after {
+                background-image: url('../svg/dessertCakeIcon.svg');
+                background-size: 48px 50px;
+                width: 48px;
+                height: 50px;
+            }
+        }
     }
 
     &__detail-title {
@@ -576,6 +615,22 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
     //usuniecie czarnego zaznaczenia
     outline: none;
 }
+
+/* .slick-prev {
+    top: 50% !important;
+    left: 0% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.slick-prev,
+.slick-next {
+    //background-color: white !important;
+
+    &:before {
+        color: $gold !important;
+        //font-size: 51px !important;
+    }
+} */
 
 /* .spr {
     padding: 4px;
