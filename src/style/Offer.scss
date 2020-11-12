@@ -367,7 +367,7 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
 
     &__offers-container {
         width: 648.14px;
-        height: 348.09px;
+        height: 348.09px + 17.33px;
         margin-left: 121px;
         background: #FEF7F7;
         border: 1px solid #C19D56;
@@ -585,6 +585,39 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
         font-weight: normal;
     }
 
+    &__buttonArrow {
+        width: 53px !important;
+        height: 53px !important;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        border-radius: 100%;
+        border: none;
+        background: none;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        //outline: none;
+
+        &:active {
+            background-size: calc(100% - 3px) calc(100% - 3px);
+        }
+
+        &--right {
+            //right: -25px;
+            left: 100%;
+            background-image: url(../svg/arrowRight.svg);
+        }
+
+        &--left {
+            z-index: 70;
+            //left: -25px;
+            left: 0%;
+            background-image: url(../svg/arrowLeft.svg);
+        }
+    }
+
     &__wave {
         position: absolute;
         top: 92.5%;
@@ -614,6 +647,36 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
 .slick-slide div {
     //usuniecie czarnego zaznaczenia
     outline: none;
+}
+
+.slick-arrow {
+    &:before {
+        content: none !important;
+        font-size: 0 !important;
+        visibility: hidden !important;
+    }
+}
+
+.button {
+    width: 53px !important;
+    height: 53px !important;
+    background: none;
+    border-radius: 100%;
+    border: none;
+    right: -25px;
+    position: absolute;
+    top: 50%;
+    display: block;
+    transform: translate(0, -50%);
+    background-image: url(../svg/arrowRight.svg);
+    cursor: pointer;
+    outline: none;
+}
+
+.str {
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
 }
 
 /* .slick-prev {
