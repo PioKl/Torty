@@ -315,6 +315,7 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
 /* ============================================================================================================
                                                     Desktop
 =============================================================================================================== */
+$sliderMargin: 17.33px;
 
 .offer-desktop {
     height: 100vh;
@@ -344,7 +345,11 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
         width: 249px;
         height: 269px;
         //margin-top: 323px;
-        margin-top: 323px - 50px;
+        //margin-top: 323px - 50px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 50px;
         margin-left: 116px;
     }
 
@@ -367,20 +372,20 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
 
     &__offers-container {
         width: 648.14px;
-        height: 348.09px + 17.33px;
+        height: 348.09px + $sliderMargin;
         margin-left: 121px;
         background: #FEF7F7;
         border: 1px solid #C19D56;
-        box-sizing: border-box;
+        //box-sizing: border-box;
         border-radius: 38px;
     }
 
     &__offers-slider {
-        margin-top: 17.33px;
+        margin-top: $sliderMargin;
     }
 
     &__slider-item {
-        position: relative;
+        //position: relative;
         z-index: 50;
         height: 348.09px; //height containera
     }
@@ -473,6 +478,8 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
     }
 
     &__details {
+        position: relative;
+
         &--commonCake {
             display: flex;
             justify-content: space-between;
@@ -657,7 +664,7 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
     }
 }
 
-.button {
+/* .button {
     width: 53px !important;
     height: 53px !important;
     background: none;
@@ -677,7 +684,7 @@ $iconSize: calc(14px + (50 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}
     width: inherit;
     height: inherit;
     cursor: pointer;
-}
+} */
 
 /* .slick-prev {
     top: 50% !important;
