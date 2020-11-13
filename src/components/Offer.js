@@ -7,16 +7,10 @@ import kucharz from "../images/kucharzMobile.png";
 import offerWave from "../images/offerWave.png";
 import Slider from "react-slick";
 /* import { ReactComponent as ArrowRight } from '../svg/arrowRight.svg'; */
-
 function SampleNextArrow(props) {
     const { onClick } = props;
     return (
-        /*<button type="button" onClick={onClick} className={`button button--text button--icon }`}>
-            <ArrowRight className="button" onClick={onClick} />
-        </button> */
-           /* <ArrowRight className="button" onClick={onClick} /> */
            <button type="button" onClick={onClick} className={`offer-desktop__buttonArrow offer-desktop__buttonArrow--right`}>
-               {/* <ArrowRight className="str" /> */}
            </button>
            
     )
