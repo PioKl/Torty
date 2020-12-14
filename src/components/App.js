@@ -4,6 +4,7 @@ import '../style/App.scss';
 import Navigation from './Navigation';
 import Hero from './Hero';
 import Offer from './Offer';
+import Gallery from './Gallery';
 
 import IsDesktopContextProvider from '../contexts/IsDesktopContext';
 
@@ -17,6 +18,7 @@ function App() {
         <main className="main">
           <Hero />
           <Offer />
+          <Gallery />
         </main>
         <footer className="footer"></footer>
       </div>
