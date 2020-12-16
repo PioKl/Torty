@@ -1,5 +1,7 @@
 @import './App.scss';
 
+$topBorderOfContainer: calc(24px + (63 - 24) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+
 .gallery {
     height: auto;
     display: flex;
@@ -26,6 +28,29 @@
 
     &__images-container {
         align-self: center;
+        position: relative;
+
+        &:before {
+            content: '';
+            background-image: url('../svg/kokarda.svg');
+            background-size: 34.81px 32.84px;
+            width: 34.81px;
+            height: 32.84px;
+            position: absolute;
+            top: calc(3% - 24px); //24px, zależne od border-top
+            //top: calc(3% - #{$topBorderOfContainer}) dla landscape inna wartosc trzeba dac, bo topBorderOfContainer jest obliczany na podsawie 100vw, a landscape 100vh;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+
+            @include mobilePortrait {
+                background-size: calc(34.81px + (95.12 - 34.81) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16}))) calc(32.84px + (86.3 - 32.84) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+
+                width: calc(34.81px + (95.12 - 34.81) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+                height: calc(32.84px + (86.3 - 32.84) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+                top: calc(3% - #{$topBorderOfContainer});
+            }
+        }
     }
 
     &__img-container {
@@ -33,6 +58,52 @@
         width: 249.93px;
         height: 221.88px;
         border-top: 24px solid $gold;
+        position: relative;
+
+        /* Responsive Media Queries */
+        @include mobilePortrait {
+            width: calc(249.93px + (650 - 249.93) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            height: calc(221.88px + (650 - 221.88) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            border-width: $topBorderOfContainer;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            background-size: 21.42px 21.3px;
+            width: 21.42px;
+            height: 21.3px;
+            position: absolute;
+
+            @include mobilePortrait {
+                background-size: calc(21.42px + (66.67 - 21.42) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16}))) calc(21.3px + (66.67 - 21.3) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+
+                width: calc(21.42px + (66.67 - 21.42) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+                height: calc(21.3px + (66.67 - 21.3) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            }
+
+        }
+
+        &:before {
+            background-image: url('../svg/arrowLeft.svg');
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:after {
+            background-image: url('../svg/arrowRight.svg');
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /*         &:active {
+
+            &:before,
+            &:after {
+                transform: translate(-50%, -50%) scale(.8);
+            }
+        } */
     }
 
     &__img {
@@ -42,6 +113,10 @@
         box-sizing: border-box;
         border-top: none;
         border-bottom: none;
+
+        @include mobilePortrait {
+            border-width: calc(1px + (3 - 1) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
     }
 
     &__img-titleContainer {
@@ -53,6 +128,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include mobilePortrait {
+            height: calc(44.38px + (117 - 44.38) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            margin-bottom: calc(79px + (102 - 79) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
     }
 
     &__img-title {
@@ -60,5 +140,9 @@
         font-weight: normal;
         font-family: $fontOne;
         color: white;
+
+        @include mobilePortrait {
+            font-size: calc(24px + (48 - 24) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
     }
 }
