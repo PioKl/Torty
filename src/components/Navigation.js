@@ -12,9 +12,9 @@ const Navigation = () => {
             {width >= 1280 ?
                 <div className="navigation__menu-desktop">
                     <ul className="desktop-itemList">
-                        <li className="desktop-itemList__item">Strona główna</li>
-                        <li className="desktop-itemList__item">Oferta</li>
-                        <li className="desktop-itemList__item">Galeria</li>
+                    <a href="#mainSite"><li className="desktop-itemList__item">Strona główna</li></a>
+                    <a href="#offer"><li className="desktop-itemList__item">Oferta</li></a>
+                    <a href="#gallery"><li className="desktop-itemList__item">Galeria</li></a>
                         <li className="desktop-itemList__item">Kontakt</li>
                     </ul>
                 </div>
