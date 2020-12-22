@@ -233,18 +233,30 @@ $topBorderOfContainerLandscape: calc(24px + (40 - 24) * ((100vh - #{$bp-small-la
 /* ============================================================================================================
                                                     Desktop
 =============================================================================================================== */
-$topBorderOfDesktopContainer: calc(33.75px + (95 - 33.75) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
-$topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
+$topBorderOfDesktopContainer: calc(33.75px + (95 - 33.75) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+$topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
 
 .gallery-desktop {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: $backgroundGallery;
-    //height: 100vh;
+
+    /*     @include ipadPro {
+        height: auto;
+    }
+
+    @include nexus10 {
+        height: auto;
+    } */
+    @include proNexusLandscape {
+        height: auto;
+    }
 
     &__section-title {
         margin-top: 103px;
-        margin-bottom: 84.28px;
+        //margin-bottom: 84.28px;
+        margin-bottom: 50px;
         position: relative;
         @include sectionTitleOne(Galeria, $pink);
         left: 1%;
@@ -254,8 +266,18 @@ $topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-sma
         }
 
         @include desktopMedium {
-            margin-top: calc(103px + (162.79 - 103) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
-            margin-bottom: calc(84.28px + (144 - 84.28) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
+            //margin-top: calc(103px + (162.79 - 103) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+
+            //margin-top: calc(103px + (212 - 103) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))); //to mialem przed tym 230
+            margin-top: calc(103px + (230 - 103) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            // margin-top: 7%;
+
+            //margin-bottom: calc(84.28px + (144 - 84.28) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+
+            margin-bottom: calc(50px + (120 - 50) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))); //to mialem przed kompentem
+
+            //margin-top: calc(103px + (112.79 - 103) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+
             /*             margin-top: calc(103px + (162.79 - 103) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
             margin-bottom: calc(50px + (120 - 50) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16}))); */
         }
@@ -263,7 +285,7 @@ $topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-sma
 
     &__images-container {
         width: 929.69px;
-        margin-bottom: 123.75px;
+        //margin-bottom: 123.75px; // to mialem przed komentem
         //margin-bottom: 80px;
         position: relative;
         left: 50%;
@@ -272,14 +294,26 @@ $topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-sma
         padding-top: 15.44px; //padding oddzieli mi border-top od kontenera
 
         @include desktopMedium {
-            width: calc(929.69px + (2039 - 929.69) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
+            width: calc(929.69px + (2039 - 929.69) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
             //margin-bottom: 212 max bylo
-            margin-bottom: calc(123.75px + (212 - 123.75) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
+            //margin-bottom: calc(123.75px + (150 - 123.75) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+
+            //margin-bottom: calc(123.75px + (212 - 123.75) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            //margin-bottom: calc(123.75px + (150 - 123.75) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))); // to mialem przed komentem
+
             //margin-bottom: calc(80px + (90 - 80) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
+
+
             border-width: $topBorderOfDesktopContainer;
             padding-top: $topPaddingOfDesktopContainer;
+
+
             //border-width: calc(33.75px + (95 - 33.75) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
             //padding-top: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        }
+
+        @include proNexusLandscape {
+            margin-bottom: 123.75px;
         }
 
         &:before {
@@ -296,9 +330,9 @@ $topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-sma
             z-index: 1;
 
             @include desktopMedium {
-                background-size: calc(61.8px + (135 - 61.8) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16}))) calc(59.06px + (126 - 59.06) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
-                width: calc(61.8px + (135 - 61.8) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
-                height: calc(59.06px + (126 - 59.06) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
+                background-size: calc(61.8px + (135 - 61.8) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))) calc(59.06px + (126 - 59.06) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                width: calc(61.8px + (135 - 61.8) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                height: calc(59.06px + (126 - 59.06) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
                 top: calc(-3% - calc(#{$topBorderOfDesktopContainer} + #{$topPaddingOfDesktopContainer}));
             }
         }
@@ -318,8 +352,11 @@ $topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-sma
         //height: 562px + 113px = 675
 
         @include desktopMedium {
-            width: calc(286.56px + (567 - 286.56) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16}))) !important;
-            height: calc(303.75px + (675 - 303.75) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
+            width: calc(286.56px + (567 - 286.56) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))) !important;
+            height: calc(303.75px + (675 - 303.75) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+
+
+
             /*             width: calc(286.56px + (467 - 286.56) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16}))) !important;
             height: calc(303.75px + (375 - 303.75) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16}))); */
         }
@@ -334,7 +371,8 @@ $topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-sma
         border-bottom: 0;
 
         @include desktopMedium {
-            height: calc(247.5px + (562 - 247.5) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
+            //height: calc(247.5px + (562 - 247.5) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            height: 80%;
         }
     }
 
@@ -347,7 +385,8 @@ $topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-sma
         align-items: center;
 
         @include desktopMedium {
-            height: calc(56.25px + (113 - 56.25) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
+            //height: calc(56.25px + (113 - 56.25) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            height: 20%;
         }
     }
 
@@ -358,7 +397,7 @@ $topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-sma
         color: white;
 
         @include desktopMedium {
-            font-size: calc(24px + (48 - 24) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16})));
+            font-size: calc(24px + (48 - 24) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
         }
     }
 
@@ -377,8 +416,8 @@ $topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-sma
         background-size: 100%;
 
         @include desktopMedium {
-            width: calc(40px + (80 - 40) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16}))) !important;
-            height: calc(40px + (80 - 40) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16}))) !important;
+            width: calc(40px + (80 - 40) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))) !important;
+            height: calc(40px + (80 - 40) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))) !important;
         }
 
 
