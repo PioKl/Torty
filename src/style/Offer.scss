@@ -443,6 +443,14 @@ $freeSpaceMargin: 50px;
             height: calc(365.4px + (710 - 365.4) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
             //height: calc(365.4px + (710 - 365.4) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
         }
+
+        /*    
+        //to dodalem, ale w komentarzu     
+        @include ipadPro {
+            position: absolute;
+            top: 60%;
+            transform: translateY(-60%);
+        } */
     }
 
     &__offers-slider {
@@ -858,14 +866,22 @@ $freeSpaceMargin: 50px;
 
     &__wave-img {
         width: 100%;
-        height: 57px;
+        //height: 57px;
+        //height: 67px;
+        //heighty zmienilem
+        height: 78px;
 
         @include desktopMedium {
-            height: calc(57px + (110 - 57) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            //height: calc(57px + (110 - 57) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            //height: calc(67px + (110 - 67) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            //heighty zmienilem
+            height: calc(78px + (110 - 78) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
         }
 
         @include ipadPro {
-            height: 76px;
+            //heighty zmienilem
+            //height: 76px;
+            height: 90px;
         }
     }
 }
