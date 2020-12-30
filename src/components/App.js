@@ -5,6 +5,7 @@ import Navigation from './Navigation';
 import Hero from './Hero';
 import Offer from './Offer';
 import Gallery from './Gallery';
+import About from './About';
 
 import IsDesktopContextProvider from '../contexts/IsDesktopContext';
 
@@ -19,6 +20,7 @@ function App() {
           <Hero />
           <Offer />
           <Gallery />
+          <About />
         </main>
         <footer className="footer"></footer>
       </div>
