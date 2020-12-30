@@ -1,0 +1,198 @@
+@import './App.scss';
+
+$shapeHeightAndWidth: calc(88.15px + (215 - 88.15) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+$shapeHeightAndWidthLandscape: calc(88.15px + (140 - 88.15) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+
+.about {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: $backgroundAbout;
+
+    &__section-title {
+        margin-top: 82.76px;
+        margin-bottom: 65.2px + 88.15px / 2;
+        position: relative;
+        left: 94.7%;
+        transform: translate(-94.7%);
+        @include sectionTitleOne(O mnie);
+
+        /* Responsive Media Queries */
+        @include mobilePortrait {
+            margin-top: calc(82.76px + (187.86 - 82.76) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            margin-bottom: calc(calc(65.2px + (121 - 65.2) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16}))) + #{$shapeHeightAndWidth / 2});
+        }
+
+        @include mobileLandscape {
+            left: 96.7%;
+        }
+
+    }
+
+    &__waveTop {
+        width: 100%;
+    }
+}
+
+.story {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.8);
+    width: 282.09px;
+    height: auto;
+    margin-bottom: 11.5;
+    position: relative;
+
+    /* Responsive Media Queries */
+    @include mobilePortrait {
+        width: calc(282.09px + (763 - 282.09) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        margin-bottom: calc(11.5px + (42.5 - 11.5) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+    }
+
+    @include mobileLandscape {
+        width: calc(282.09px + (650 - 282.09) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        margin-bottom: calc(11.5px + (42.5 - 11.5) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+    }
+
+    &__shape {
+        width: 88.15px;
+        height: 88.15px;
+        position: relative;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        /* Responsive Media Queries */
+        @include mobilePortrait {
+            width: $shapeHeightAndWidth;
+            height: $shapeHeightAndWidth;
+        }
+
+        @include mobileLandscape {
+            width: $shapeHeightAndWidthLandscape;
+            height: $shapeHeightAndWidthLandscape;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__caption {
+        text-align: center;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+        font-style: italic;
+        font-family: $fontTwo;
+        margin-top: 12px;
+
+        /* Responsive Media Queries */
+        @include mobilePortrait {
+            font-size: calc(18px + (48 - 18) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            line-height: calc(18px + (48 - 18) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            margin-top: calc(12px + (34.5 - 12) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        @include mobileLandscape {
+            font-size: calc(18px + (32 - 18) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            line-height: calc(18px + (32 - 18) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            margin-top: calc(12px + (20 - 12) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        }
+    }
+
+    &__barrier {
+        width: 14.1px;
+        height: 14.1px;
+        background-color: $gold;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 12px;
+        position: relative;
+
+        /* Responsive Media Queries */
+        @include mobilePortrait {
+            width: calc(14.1px + (38 - 14.1) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            height: calc(14.1px + (38 - 14.1) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            margin-bottom: calc(12px + (34.5 - 12) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        @include mobileLandscape {
+            width: calc(14.1px + (23 - 14.1) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            height: calc(14.1px + (23 - 14.1) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            margin-bottom: calc(12px + (20 - 12) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        }
+
+        &::before {
+            content: '';
+            width: 88.15px;
+            border-bottom: .2rem solid $gold;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-right: 155.3%;
+            transform: translateY(-50%);
+            z-index: 1;
+
+            /* Responsive Media Queries */
+            @include mobilePortrait {
+                width: calc(88.15px + (238.44 - 88.15) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+                border-width: calc(2px + (4 - 2) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            }
+
+            @include mobileLandscape {
+                width: calc(88.15px + (260 - 88.15) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+                border-width: calc(2px + (3 - 2) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            }
+        }
+
+        &::after {
+            content: '';
+            width: 88.15px;
+            border-bottom: 2px solid $gold;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-left: 155.3%;
+            transform: translateY(-50%);
+            z-index: 1;
+
+            /* Responsive Media Queries */
+            @include mobilePortrait {
+                width: calc(88.15px + (238.44 - 88.15) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+                border-width: calc(2px + (4 - 2) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            }
+
+            @include mobileLandscape {
+                width: calc(88.15px + (260 - 88.15) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+                border-width: calc(2px + (3 - 2) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            }
+        }
+    }
+
+    &__description {
+        font-family: $fontTwo;
+        font-size: 12px;
+        font-weight: 600;
+        font-style: italic;
+        line-height: 17px;
+        padding: 0 32px 16px 32px;
+        text-align: center;
+
+        /* Responsive Media Queries */
+        @include mobilePortrait {
+            font-size: calc(12px + (32 - 12) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            line-height: calc(17px + (43 - 17) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            padding: 0 calc(32px + (88 - 32) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16}))) calc(16px + (90.5 - 16) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16}))) calc(32px + (88 - 32) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        @include mobileLandscape {
+            font-size: calc(12px + (22 - 12) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            line-height: calc(17px + (36 - 17) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            padding: 0 calc(32px + (36 - 32) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16}))) calc(16px + (50.5 - 16) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16}))) calc(32px + (36 - 32) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        }
+    }
+
+}
