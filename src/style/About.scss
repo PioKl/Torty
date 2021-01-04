@@ -42,12 +42,18 @@ $shapeHeightAndWidthDesktop: calc(100px + (228 - 100) * ((100vw - #{$bp-medium-l
 
         @include desktopSmall {
             margin-top: 103px;
+            //margin-top: 10.3rem; //do rozwiazania z remami
             margin-bottom: 50px;
             //margin-bottom: 50px + 100px / 2; // 2 rozwiazanie
             left: 98.7%;
             transform: translate(-98.7%);
 
             @include desktopMedium {
+                /*================== Rozwiązanie z Remami ==================*/
+                //margin-top: calc(10.3rem + (((100vw - #{$bp-medium-laptopWidth/1em*1.6rem}) / (#{$bp-large-laptopWidth/1em * 1.6} - #{$bp-medium-laptopWidth/1em * 1.6}))) * (23 - 10.3)); // jak z remami zrobic i zmiennymi
+                //margin-top: calc(10.3rem + (((100vw - 153.6rem) / (256 - 153.6))) * (23 - 10.3)); //jak z remami zrobic
+                //wzór : calc(#{$min-font-size}rem + ((100vw - #{$min-vw}rem) / (#{$max-vw} - #{$min-vw})) * (#{$max-font-size} - #{$min-font-size}));
+                /*================== KONIEC ==================*/
                 margin-top: calc(103px + (230 - 103) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
                 margin-bottom: calc(50px + (120 - 50) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
                 //margin-bottom: calc(calc(50px + (120 - 50) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))) + #{$shapeHeightAndWidthDesktop / 2}); // 2 rozwiazanie
