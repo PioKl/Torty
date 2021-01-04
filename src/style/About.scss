@@ -2,12 +2,25 @@
 
 $shapeHeightAndWidth: calc(88.15px + (215 - 88.15) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
 $shapeHeightAndWidthLandscape: calc(88.15px + (140 - 88.15) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+$shapeHeightAndWidthDesktop: calc(100px + (228 - 100) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
 
 .about {
     height: auto;
     display: flex;
     flex-direction: column;
     background: $backgroundAbout;
+
+    @include desktopSmall {
+        height: 100vh; //jak zakomentuje to bedzie 2 rozwiazanie
+        background-image: url('../images/aboutTło.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @include proNexusLandscape {
+        height: auto;
+    }
+
 
     &__section-title {
         margin-top: 82.76px;
@@ -27,6 +40,20 @@ $shapeHeightAndWidthLandscape: calc(88.15px + (140 - 88.15) * ((100vh - #{$bp-sm
             left: 96.7%;
         }
 
+        @include desktopSmall {
+            margin-top: 103px;
+            margin-bottom: 50px;
+            //margin-bottom: 50px + 100px / 2; // 2 rozwiazanie
+            left: 98.7%;
+            transform: translate(-98.7%);
+
+            @include desktopMedium {
+                margin-top: calc(103px + (230 - 103) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                margin-bottom: calc(50px + (120 - 50) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                //margin-bottom: calc(calc(50px + (120 - 50) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))) + #{$shapeHeightAndWidthDesktop / 2}); // 2 rozwiazanie
+            }
+        }
+
     }
 
     &__waveTop {
@@ -41,8 +68,7 @@ $shapeHeightAndWidthLandscape: calc(88.15px + (140 - 88.15) * ((100vh - #{$bp-sm
     background: rgba(255, 255, 255, 0.8);
     width: 282.09px;
     height: auto;
-    margin-bottom: 11.5;
-    position: relative;
+    margin-bottom: 11.5px;
 
     /* Responsive Media Queries */
     @include mobilePortrait {
@@ -53,6 +79,22 @@ $shapeHeightAndWidthLandscape: calc(88.15px + (140 - 88.15) * ((100vh - #{$bp-sm
     @include mobileLandscape {
         width: calc(282.09px + (650 - 282.09) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         margin-bottom: calc(11.5px + (42.5 - 11.5) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+    }
+
+    @include desktopSmall {
+        width: 530.26px;
+        margin-bottom: 0;
+        //margin-bottom: 81px; // 2 rozwiazanie
+        background: rgba(255, 255, 255, 0.92);
+
+        @include desktopMedium {
+            width: calc(530.26px + (972 - 530.26) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            //margin-bottom: calc(81px + (130 - 81) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))); // 2 rozwiazanie
+        }
+    }
+
+    @include proNexusLandscape {
+        margin-bottom: 81px;
     }
 
     &__shape {
@@ -72,6 +114,16 @@ $shapeHeightAndWidthLandscape: calc(88.15px + (140 - 88.15) * ((100vh - #{$bp-sm
         @include mobileLandscape {
             width: $shapeHeightAndWidthLandscape;
             height: $shapeHeightAndWidthLandscape;
+        }
+
+        @include desktopSmall {
+            width: 100px;
+            height: 100px;
+
+            @include desktopMedium {
+                width: calc(100px + (228 - 100) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                height: calc(100px + (228 - 100) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            }
         }
     }
 
@@ -101,6 +153,25 @@ $shapeHeightAndWidthLandscape: calc(88.15px + (140 - 88.15) * ((100vh - #{$bp-sm
             line-height: calc(18px + (32 - 18) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
             margin-top: calc(12px + (20 - 12) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         }
+
+        @include desktopSmall {
+            //font-size: 36px;
+            //line-height: 36px;
+            font-size: 30px;
+            line-height: 30px;
+            margin-top: 17px;
+            width: 200%;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+
+            @include desktopMedium {
+                font-size: calc(30px + (48 - 30) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                line-height: calc(30px + (48 - 30) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                margin-top: calc(17px + (48.42 - 17) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            }
+        }
     }
 
     &__barrier {
@@ -125,6 +196,18 @@ $shapeHeightAndWidthLandscape: calc(88.15px + (140 - 88.15) * ((100vh - #{$bp-sm
             margin-bottom: calc(12px + (20 - 12) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         }
 
+        @include desktopSmall {
+            width: 18px;
+            height: 18px;
+            margin: 17px auto;
+
+            @include desktopMedium {
+                width: calc(18px + (55 - 18) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                height: calc(18px + (55 - 18) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                margin: calc(17px + (25 - 17) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))) auto;
+            }
+        }
+
         &::before {
             content: '';
             width: 88.15px;
@@ -145,6 +228,15 @@ $shapeHeightAndWidthLandscape: calc(88.15px + (140 - 88.15) * ((100vh - #{$bp-sm
             @include mobileLandscape {
                 width: calc(88.15px + (260 - 88.15) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
                 border-width: calc(2px + (3 - 2) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            }
+
+            @include desktopSmall {
+                width: 200px;
+
+                @include desktopMedium {
+                    width: calc(200px + (350 - 200) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                    border-width: calc(2px + (4 - 2) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                }
             }
         }
 
@@ -169,6 +261,15 @@ $shapeHeightAndWidthLandscape: calc(88.15px + (140 - 88.15) * ((100vh - #{$bp-sm
                 width: calc(88.15px + (260 - 88.15) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
                 border-width: calc(2px + (3 - 2) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
             }
+
+            @include desktopSmall {
+                width: 200px;
+
+                @include desktopMedium {
+                    width: calc(200px + (350 - 200) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                    border-width: calc(2px + (4 - 2) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                }
+            }
         }
     }
 
@@ -192,6 +293,18 @@ $shapeHeightAndWidthLandscape: calc(88.15px + (140 - 88.15) * ((100vh - #{$bp-sm
             font-size: calc(12px + (22 - 12) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
             line-height: calc(17px + (36 - 17) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
             padding: 0 calc(32px + (36 - 32) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16}))) calc(16px + (50.5 - 16) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16}))) calc(32px + (36 - 32) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        }
+
+        @include desktopSmall {
+            font-size: 18px;
+            line-height: 34px;
+            padding: 0 55px 24px 55px;
+
+            @include desktopMedium {
+                font-size: calc(18px + (36 - 18) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                line-height: calc(34px + (58 - 34) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                padding: 0 calc(55px + (100 - 55) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))) calc(24px + (100 - 24) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))) calc(55px + (100 - 55) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            }
         }
     }
 
