@@ -205,7 +205,7 @@ $topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-med
         margin-bottom: 50px;
         position: relative;
         @include sectionTitleOne(Galeria, $pink);
-        left: 1%;
+        left: .8%;
 
         &::before {
             left: -5%;
