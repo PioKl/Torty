@@ -13,19 +13,26 @@ const Contact = () => {
             <div className="contact__section-title"></div>
             <form onSubmit={handleSubmit} className="form-contact" action="">
                 <h1 className="form-contact__title">Wyślij mi wiadomość</h1>
-                <label className="form-contact__item form-contact__item--name" htmlFor="name">Imię
-                    <input className="form-contact__input form-contact__input--name" type="text" id="name" name="name" required />
-                </label>
-                <label className="form-contact__item form-contact__item--email" htmlFor="email">e-mail
-                    <input className="form-contact__input form-contact__input--email" type="email" id="email" name="email" required />
-                </label>
-                <label className="form-contact__item form-contact__item--number" htmlFor="phone">numer telefonu
-                    <input className="form-contact__input form-contact__input--number" type="tel" id="phone" name="phone" required/*  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" */ />
-                </label>
-                <label className="form-contact__message" htmlFor="message">wiadomość
-                    <textarea className="form-contact__information" id="message" name="message" />
-                </label>
-                <button className="form-contact__sendButton">Wyślij</button>
+                <div className="form-contact__infoAndMessageContainer">
+                    <div className="form-contact__userInformationContainer">
+                        <label className="form-contact__item form-contact__item--name" htmlFor="name">Imię
+                        <input className="form-contact__input form-contact__input--name" type="text" id="name" name="name" required />
+                        </label>
+                        <label className="form-contact__item form-contact__item--email" htmlFor="email">e-mail
+                        <input className="form-contact__input form-contact__input--email" type="email" id="email" name="email" required />
+                        </label>
+                        <label className="form-contact__item form-contact__item--number" htmlFor="phone">numer telefonu
+                        <input className="form-contact__input form-contact__input--number" type="tel" id="phone" name="phone" required/*  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" */ />
+                        </label>
+                    </div>
+                    <div className="form-contact__userMessageContainer">
+                        <label className="form-contact__message" htmlFor="message">wiadomość
+                        <textarea className="form-contact__information" id="message" name="message" />
+                        </label>
+                        <button className="form-contact__sendButton">Wyślij</button>
+                    </div>
+                </div>
+
             </form>
         </div>
     );
