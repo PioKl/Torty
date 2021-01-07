@@ -23,6 +23,10 @@ input:-webkit-autofill:active {
         background-image: url('../images/contactTłoDesktop.png');
     }
 
+    @include proNexusLandscape {
+        height: auto;
+    }
+
     &__waveTop {
         width: 100%;
         position: relative;
@@ -57,6 +61,11 @@ input:-webkit-autofill:active {
             left: .8%;
             margin-top: 103px;
             margin-bottom: 50px;
+
+            @include desktopMedium {
+                margin-top: calc(103px + (230 - 103) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                margin-bottom: calc(50px + (120 - 50) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            }
         }
 
     }
@@ -98,6 +107,15 @@ input:-webkit-autofill:active {
         //margin: 0 265px 74.21px 265px;
         margin: 0;
         padding: 0 46px 0 46px;
+
+        @include desktopMedium {
+            width: calc(806px + (1825.95 - 806) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            padding: 0 calc(46px + (125 - 46) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16}))) 0 calc(46px + (125 - 46) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+        }
+    }
+
+    @include proNexusLandscape {
+        margin-bottom: 74.21px;
     }
 
     &__title {
@@ -134,6 +152,13 @@ input:-webkit-autofill:active {
             font-weight: 400;
             font-size: 24px;
             line-height: 24px;
+
+            @include desktopMedium {
+                padding-top: calc(24.43px + (53 - 24.43) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                padding-bottom: calc(48.87px + (111 - 48.87) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                font-size: calc(24px + (48 - 24) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                line-height: calc(24px + (48 - 24) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            }
         }
     }
 
@@ -184,7 +209,14 @@ input:-webkit-autofill:active {
                 top: 0%;
                 transform: translateX(-47.5%);
                 z-index: 2;
-                border-bottom: 316.78px solid white;
+                //border-bottom: 316.78px solid white;
+                border-bottom: 263px solid white;
+
+                @include desktopMedium {
+                    //border-width: calc(263px + (640 - 263) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                    width: calc(1px + (2 - 1) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                    border-width: calc(263px + (568 - 263) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                }
             }
         }
     }
@@ -218,8 +250,24 @@ input:-webkit-autofill:active {
             font-size: 18px;
             line-height: 18px;
             padding-bottom: 45.45px;
-        }
 
+            &:last-child {
+                padding-bottom: 26.45px;
+            }
+
+            @include desktopMedium {
+                font-size: calc(18px + (36 - 18) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                line-height: calc(18px + (36 - 18) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                //padding-bottom: calc(45.45px + (134 - 45.45) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                padding-bottom: calc(45.45px + (96.25 - 45.45) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+
+                &:last-child {
+                    //padding-bottom: calc(45.45px + (53 - 45.45) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                    padding-bottom: calc(45.45px + (56 - 45.45) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+
+                }
+            }
+        }
     }
 
     &__input {
@@ -256,8 +304,17 @@ input:-webkit-autofill:active {
             width: 252px;
             /* margin-top: 15px;
             padding-bottom: 10px; */
-            margin-top: 20px;
-            padding-bottom: 19px;
+            //margin-top: 20px;
+            //padding-bottom: 19px;
+            margin-top: 10px;
+            padding-bottom: 10px;
+
+            @include desktopMedium {
+                width: calc(252px + (579 - 252) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                margin-top: calc(10px + (26 - 10) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                padding-bottom: calc(10px + (26 - 10) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                border-width: calc(1px + (2 - 1) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            }
         }
     }
 
@@ -310,6 +367,13 @@ input:-webkit-autofill:active {
             font-size: 18px;
             line-height: 18px;
             margin-bottom: 14.48px;
+
+            @include desktopMedium {
+                font-size: calc(18px + (36 - 18) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                line-height: calc(18px + (36 - 18) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                //margin-bottom: calc(14.48px + (38 - 14.48) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                margin-bottom: calc(14.48px + (28 - 14.48) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            }
         }
     }
 
@@ -347,9 +411,19 @@ input:-webkit-autofill:active {
         }
 
         @include desktopSmall {
-            height: 218.09px;
+            //height: 218.09px;
+            height: 179.1px;
             width: 310px;
-            margin-top: 32.60px;
+            //margin-top: 32.60px;
+            margin-top: 14.48px;
+
+            @include desktopMedium {
+                //height: calc(179.1px + (455 - 179.1) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                height: calc(179.1px + (403 - 179.1) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                width: calc(310px + (672 - 310) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                //margin-top: calc(14.48px + (38 - 14.48) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                margin-top: calc(14.48px + (28 - 14.48) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            }
         }
     }
 
@@ -404,6 +478,14 @@ input:-webkit-autofill:active {
             line-height: 20px;
             width: 184.52px;
             height: 36.2px;
+
+            @include desktopMedium {
+                font-size: calc(20px + (36 - 20) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                line-height: calc(20px + (36 - 20) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                width: calc(184.52px + (282.76 - 184.52) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                height: calc(36.2px + (75 - 36.2) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                border-width: calc(1px + (2 - 1) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+            }
         }
 
         /* 
