@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import '../style/Hero.scss';
 import { IsDesktopContext } from '../contexts/IsDesktopContext';
+import { BurgerMenuContext } from '../contexts/BurgerMenuContext';
 
 import obrazek from "../images/vector.png";
 import lukier from "../images/lukier.png";
@@ -9,6 +10,7 @@ import kwiatPoster from "../images/fancyplant.png";
 import kwiatyTransparent from "../images/tłoKwiatyTransparent.png";
 const Hero = () => {
     const { width } = useContext(IsDesktopContext);
+    const { burgerMenu } = useContext(BurgerMenuContext);
     return (
         <>
             {width >= 1280 ?
@@ -36,7 +38,7 @@ const Hero = () => {
 
                 </div>
                 :
-                <div className="hero">
+                <div id="mainSite" className={`hero ${burgerMenu && 'grayScale'}`}>
                     {/*             <div className="hero__test">
                 <h2 className="hero__author">Jane Doe</h2>
             </div> */}
