@@ -9,23 +9,26 @@ import About from './About';
 import Contact from './Contact';
 
 import IsDesktopContextProvider from '../contexts/IsDesktopContext';
+import BurgerMenuContextProvider from '../contexts/BurgerMenuContext';
 
 function App() {
   return (
     <IsDesktopContextProvider>
-      <div className="App">
-        <header className="header">
-          <Navigation />
-        </header>
-        <main className="main">
-          <Hero />
-          <Offer />
-          <Gallery />
-          <About />
-          <Contact />
-        </main>
-        <footer className="footer"></footer>
-      </div>
+      <BurgerMenuContextProvider>
+        <div className="App">
+          <header className="header">
+            <Navigation />
+          </header>
+          <main className="main">
+            <Hero />
+            <Offer />
+            <Gallery />
+            <About />
+            <Contact />
+          </main>
+          <footer className="footer"></footer>
+        </div>
+      </BurgerMenuContextProvider>
     </IsDesktopContextProvider>
   );
 }
