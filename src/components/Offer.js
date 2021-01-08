@@ -3,6 +3,7 @@ import '../style/Offer.scss';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IsDesktopContext } from '../contexts/IsDesktopContext';
+import { BurgerMenuContext } from '../contexts/BurgerMenuContext';
 import kucharz from "../images/kucharzMobile.png";
 import offerWave from "../images/offerWave.png";
 import Slider from "react-slick";
@@ -27,6 +28,7 @@ function SampleNextArrow(props) {
 
 const Offer = () => {
     const { width } = useContext(IsDesktopContext);
+    const { burgerMenu } = useContext(BurgerMenuContext);
 
 /*     const settings = {
         dots: false,
@@ -47,14 +49,14 @@ const Offer = () => {
     return ( 
         <>
         {width >= 1280 ? 
-            <div className="offer-desktop">
+            <div id="offer" className="offer-desktop">
                 <div className="offer-desktop__left-side">
                     <img className="offer-desktop__img" src={kucharz} alt=""/>
                 </div>
                 <div className="offer-desktop__right-side">
-                    <div className="offer-desktop__section-title">
-
-                    </div>
+                    {/* <div className="offer-desktop__sectionTitle-container"> */}
+                        <div className="offer-desktop__section-title"></div>
+                    {/* </div> */}
                     <div className="offer-desktop__offers-container">
                     <Slider className="offer-desktop__offers-slider" {...settings}>
                         <div className="offer-desktop__slider-item">
@@ -108,7 +110,7 @@ const Offer = () => {
                 </div>
             </div>
             :
-        <div className="offer">
+        <div id="offer" className={`offer ${burgerMenu && 'grayScale'}`}>
             <div className="offer__section-title"></div>
             <div className="offer__content">
                 <div className="offer__left-side">
