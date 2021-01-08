@@ -1,5 +1,11 @@
 @import './Base.scss';
 
+.grayScale {
+    filter: blur(12px);
+    //filter: opacity(40%);
+    pointer-events: none;
+}
+
 @mixin button($width, $height, $fontSize) {
     width: $width;
     height: $height;
