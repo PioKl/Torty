@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import '../style/Gallery.scss';
 import { IsDesktopContext } from '../contexts/IsDesktopContext';
+import { BurgerMenuContext } from '../contexts/BurgerMenuContext';
 import Slider from "react-slick";
 import galeria1 from '../images/galeria1.png';
 
@@ -24,6 +25,7 @@ function SamplePreviousArrow(props) {
 
 const Gallery = () => {
     const { width } = useContext(IsDesktopContext);
+    const { burgerMenu } = useContext(BurgerMenuContext);
     const settings = {
         dots: false,
         infinite: true,
@@ -67,7 +69,7 @@ const Gallery = () => {
                     {/* </div> */}
                 </div>
                 :
-                <div className="gallery">
+                <div id="gallery" className={`gallery ${burgerMenu && 'grayScale'}`}>
                     <div className="gallery__section-title"></div>
                     <div className="gallery__images-container">
                         <div className="gallery__img-container">
