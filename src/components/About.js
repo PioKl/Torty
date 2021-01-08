@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import { IsDesktopContext } from '../contexts/IsDesktopContext';
+import { BurgerMenuContext } from '../contexts/BurgerMenuContext';
 import '../style/About.scss';
 import person from '../images/personPhoto.png';
 import aboutWaveTop from '../images/aboutWaveTop.png';
 const About = () => {
     const { width } = useContext(IsDesktopContext);
+    const { burgerMenu } = useContext(BurgerMenuContext);
     return (
-        <div id="about" className="about">
+        <div id="about" className={`about ${width <= 1280 && burgerMenu && 'grayScale'}`}>
             <div className="about__section-title"></div>
             <div className="story">
                 <figure className="story__shape">
