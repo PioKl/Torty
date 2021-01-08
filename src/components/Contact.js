@@ -1,14 +1,16 @@
 import React, { useContext } from 'react';
 import { IsDesktopContext } from '../contexts/IsDesktopContext';
+import { BurgerMenuContext } from '../contexts/BurgerMenuContext';
 import '../style/Contact.scss';
 import aboutContactWave from '../images/aboutContactWave.png'
 const Contact = () => {
     const { width } = useContext(IsDesktopContext);
+    const { burgerMenu } = useContext(BurgerMenuContext);
     const handleSubmit = (e) => {
         e.preventDefault();
     }
     return (
-        <div id="contact" className="contact">
+        <div id="contact" className={`contact ${width <= 1280 && burgerMenu && 'grayScale'}`}>
             {width < 1280 ? <img className="contact__waveTop" src={aboutContactWave} alt="" /> : null}
             <div className="contact__section-title"></div>
             <form onSubmit={handleSubmit} className="form-contact" action="">
