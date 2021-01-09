@@ -7,6 +7,7 @@ import Offer from './Offer';
 import Gallery from './Gallery';
 import About from './About';
 import Contact from './Contact';
+import Footer from './Footer';
 
 import IsDesktopContextProvider from '../contexts/IsDesktopContext';
 import BurgerMenuContextProvider from '../contexts/BurgerMenuContext';
@@ -26,7 +27,8 @@ function App() {
             <About />
             <Contact />
           </main>
-          <footer className="footer"></footer>
+          {/* <footer className="footer"></footer> */}
+          <Footer />
         </div>
       </BurgerMenuContextProvider>
     </IsDesktopContextProvider>
