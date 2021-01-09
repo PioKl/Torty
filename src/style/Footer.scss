@@ -1,0 +1,363 @@
+@import './App.scss';
+
+.footer {
+    background-color: $backgroundFooter;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -.1%;
+
+    &__authorContainer {
+        @include mobileLandscape {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            //height: 80vh;
+            //height: 255px;
+            //height: 355px;
+            //height: calc(255px + (500 - 255) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            height: 80vh;
+            margin: 0 calc(11px + (28.44 - 11) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-large-landscapeHeight/1em*16} - #{$bp-small-landscapeHeight/1em*16})));
+        }
+    }
+
+    /*     &__cakeIcon {
+        display: flex;
+        align-self: center;
+        width: 73.14px;
+        height: 96.81px;
+        margin-top: 63px;
+        margin-bottom: 42px;
+
+        
+        @include mobilePortrait {
+            width: calc(73.14px + (187.5 - 73.14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            height: calc(96.81px + (229.17 - 96.81) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            margin-top: calc(63px + (168 - 63) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            margin-bottom: calc(42px + (110 - 42) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        color: $gold;
+        font-family: $fontOne;
+        font-weight: 400;
+        font-size: 36px;
+        margin-bottom: 42px;
+
+       
+        @include mobilePortrait {
+            font-size: calc(36px + (96 - 36) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            margin-bottom: calc(42px + (90 - 42) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+    } */
+}
+
+.authorLogo {
+    display: flex;
+    flex-direction: column;
+
+    @include mobileLandscape {
+        flex-direction: row;
+        align-self: center;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__cakeIcon {
+        display: flex;
+        align-self: center;
+        width: 73.14px;
+        height: 96.81px;
+        margin-top: 63px;
+        margin-bottom: 42px;
+
+        /* Responsive Media Queries */
+        @include mobilePortrait {
+            width: calc(73.14px + (187.5 - 73.14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            height: calc(96.81px + (229.17 - 96.81) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            margin-top: calc(63px + (168 - 63) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            margin-bottom: calc(42px + (110 - 42) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        @include mobileLandscape {
+            flex-direction: row;
+            margin: 0;
+            width: calc(41px + (73 - 41) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            height: calc(41px + (76 - 41) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            margin-right: calc(10.5px + (20 - 10.5) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        color: $gold;
+        font-family: $fontOne;
+        font-weight: 400;
+        font-size: 36px;
+        margin-bottom: 42px;
+
+        /* Responsive Media Queries */
+        @include mobilePortrait {
+            font-size: calc(36px + (96 - 36) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            margin-bottom: calc(42px + (90 - 42) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        @include mobileLandscape {
+            display: flex;
+            align-self: flex-end;
+            margin-bottom: 0;
+            position: relative;
+            font-size: calc(18px + (36 - 18) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            top: calc(4px - (0 + 4) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        }
+    }
+}
+
+.authorData {
+    display: flex;
+    flex-direction: column;
+    font-family: $fontTwo;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: $gold;
+    text-align: center;
+
+    /* Responsive Media Queries */
+    @include mobilePortrait {
+        font-size: calc(18px + (48 - 18) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        line-height: calc(18px + (48 - 18) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+    }
+
+    @include mobileLandscape {
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        margin: 0 auto;
+        position: relative;
+
+        font-size: calc(14px + (32 - 14) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+
+        &:before {
+            content: '';
+            width: 1px;
+            position: absolute;
+            left: -10%;
+            border-bottom: calc(170px + (360 - 170) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16}))) solid $gold;
+        }
+
+        &:after {
+            content: '';
+            width: 1px;
+            position: absolute;
+            left: 110%;
+            //left: 100%;
+            border-bottom: calc(170px + (360 - 170) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16}))) solid $gold;
+        }
+    }
+
+    &__mail,
+    &__phoneNumber {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__mail {
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: 28px;
+
+        @include mobileLandscape {
+            margin-bottom: calc(10px + (30 - 10) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            /*             margin-right: calc(10px + (80 - 10) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            margin-left: calc(10px + (80 - 10) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16}))); */
+        }
+
+        &:before {
+            content: '';
+            background-image: url('../svg/emailIcon.svg');
+            background-size: 28px 28px;
+            height: 28px;
+            width: 28px;
+            margin-right: 7px;
+
+            /* Responsive Media Queries */
+            @include mobilePortrait {
+                background-size: calc(28px + (70 - 28) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16}))) calc(28px + (70 - 28) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+                height: calc(28px + (70 - 28) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+                width: calc(28px + (70 - 28) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+                margin-right: calc(7px + (26 - 7) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            }
+
+            @include mobileLandscape {
+                background-size: calc(28px + (36 - 28) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16}))) calc(28px + (36 - 28) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+                height: calc(28px + (36 - 28) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+                width: calc(28px + (36 - 28) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            }
+        }
+    }
+
+    &__phoneNumber {
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: 45.24px;
+
+        /* Responsive Media Queries */
+        @include mobilePortrait {
+            margin-bottom: calc(45.24px + (71.5 - 45.24) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        @include mobileLandscape {
+            margin-bottom: 0;
+        }
+
+        &:before {
+            content: '';
+            background-image: url('../svg/phoneIcon.svg');
+            background-size: 28px 28px;
+            height: 28px;
+            width: 28px;
+            margin-right: 7px;
+
+            /* Responsive Media Queries */
+            @include mobilePortrait {
+                background-size: calc(28px + (70 - 28) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16}))) calc(28px + (70 - 28) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+                height: calc(28px + (70 - 28) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+                width: calc(28px + (70 - 28) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+                margin-right: calc(7px + (26 - 7) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            }
+
+            @include mobileLandscape {
+                background-size: calc(28px + (36 - 28) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16}))) calc(28px + (36 - 28) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+                height: calc(28px + (36 - 28) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+                width: calc(28px + (36 - 28) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            }
+        }
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    //position: relative;
+    //left: -8%;
+    margin-bottom: 37px;
+
+    /* Responsive Media Queries */
+    @include mobilePortrait {
+        margin-bottom: calc(37px + (59.27 - 37) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+    }
+
+    @include mobileLandscape {
+        margin-bottom: 0;
+        align-self: center;
+        margin: 0 auto;
+    }
+
+    &__facebook,
+    &__instagram {
+        background-image: url('../svg/triangle.svg');
+        background-size: 71px 71px;
+        background-repeat: no-repeat;
+        height: 71px;
+        width: 71px;
+        position: relative;
+
+
+        /* Responsive Media Queries */
+        @include mobilePortrait {
+            background-size: calc(71px + (224 - 71) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16}))) calc(71px + (224 - 71) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            height: calc(71px + (224 - 71) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            width: calc(71px + (224 - 71) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        @include mobileLandscape {
+            background-size: calc(71px + (100 - 71) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16}))) calc(71px + (100 - 71) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            height: calc(71px + (100 - 71) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            width: calc(71px + (100 - 71) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        }
+    }
+
+    &__instagram {
+        transform: rotate(180deg);
+        //position: absolute;
+        //left: 52%;
+        //left: 52%;
+        //margin-left: -30px;
+        margin-left: -9.4%;
+
+        /* Responsive Media Queries */
+        /*         @include mobilePortrait {
+            margin-left: calc(-30px + (-100 - -30) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        } */
+        @include mobileLandscape {
+            margin-left: -22%;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left: 50%;
+        top: 75%;
+        transform: translate(-50%, -75%);
+        width: 27px;
+        height: 27px;
+
+        /* Responsive Media Queries */
+        @include mobilePortrait {
+            width: calc(27px + (84 - 27) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            height: calc(27px + (84 - 27) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        @include mobileLandscape {
+            height: calc(27px + (40 - 27) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            width: calc(27px + (40 - 27) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            ;
+        }
+    }
+}
+
+.websiteAuthor {
+    width: 100%;
+    height: 31px;
+    background: #211B1A;
+    color: $gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Responsive Media Queries */
+    @include mobilePortrait {
+        height: calc(31px + (74.7 - 31) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+    }
+
+    @include mobileLandscape {
+        height: calc(31px + (70 - 31) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+    }
+
+    &__heading {
+        font-family: $fontTwo;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+
+        /* Responsive Media Queries */
+        @include mobilePortrait {
+            font-size: calc(14px + (24 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+            line-height: calc(14px + (24 - 14) * ((100vw - #{$bp-small-portraitWidth/1em*16px}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
+        }
+
+        @include mobileLandscape {
+            font-size: calc(14px + (32 - 14) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+            line-height: calc(14px + (32 - 14) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
+        }
+
+    }
+
+
+}
