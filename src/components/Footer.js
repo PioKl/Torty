@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import '../style/Footer.scss';
 import { ReactComponent as FooterCakeIcon } from '../svg/cakeFooterLogo.svg';
-/* import { ReactComponent as Facebook } from '../svg/socjalFacebookIcon.svg';
-import { ReactComponent as Triangle } from '../svg/triangle.svg'; */
 import { ReactComponent as FacebookIcon } from '../svg/facebookIcon.svg'
 import { ReactComponent as InstagramIcon } from '../svg/instagramIcon.svg'
 import { BurgerMenuContext } from '../contexts/BurgerMenuContext';
@@ -20,7 +18,6 @@ const Footer = () => {
                     <h2 className="authorData__mail">janedoe@gmail.com</h2>
                     <h2 className="authorData__phoneNumber">653 123 754</h2>
                 </div>
-                {/* <Facebook /> */}
                 <div className="social">
                     <div className="social__facebook">
                         <FacebookIcon className="social__icon social__icon--facebook" />
