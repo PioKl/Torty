@@ -7,7 +7,6 @@ import { BurgerMenuContext } from '../contexts/BurgerMenuContext';
 import kucharz from "../images/kucharzMobile.png";
 import offerWave from "../images/offerWave.png";
 import Slider from "react-slick";
-/* import { ReactComponent as ArrowRight } from '../svg/arrowRight.svg'; */
 function SampleNextArrow(props) {
     const { onClick } = props;
     return (
@@ -30,13 +29,6 @@ const Offer = () => {
     const { width } = useContext(IsDesktopContext);
     const { burgerMenu } = useContext(BurgerMenuContext);
 
-/*     const settings = {
-        dots: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,  
-      }; */
       const settings = {
         slidesToShow: 3,
         centerMode: true,
@@ -54,9 +46,7 @@ const Offer = () => {
                     <img className="offer-desktop__img" src={kucharz} alt=""/>
                 </div>
                 <div className="offer-desktop__right-side">
-                    {/* <div className="offer-desktop__sectionTitle-container"> */}
                         <div className="offer-desktop__section-title"></div>
-                    {/* </div> */}
                     <div className="offer-desktop__offers-container">
                     <Slider className="offer-desktop__offers-slider" {...settings}>
                         <div className="offer-desktop__slider-item">
