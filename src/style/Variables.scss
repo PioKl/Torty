@@ -2,6 +2,5 @@ $navigationHeight: calc(22.5px + (118 - 22.5) * ((100vw - #{$bp-small-portraitWi
 
 $navigationHeightLandscape: calc(22.5px + (118 - 22.5) * ((100vh - #{$bp-small-portraitWidth}) / (#{$bp-large-portraitWidth/1em * 16} - #{$bp-small-portraitWidth/1em * 16})));
 
-/* $navigationHeightLaptop: calc(53.8px + (100 - 53.8) * ((100vw - #{$bp-small-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-small-laptopWidth/1em * 16}))); */
 $navigationHeightLaptop: 6.04rem;
 $navigationHeightLaptopRwd: calc(64.4px + (160 - 64.4) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
