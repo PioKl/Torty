@@ -39,22 +39,16 @@ const Hero = () => {
                 </div>
                 :
                 <div id="mainSite" className={`hero ${burgerMenu && 'grayScale'}`}>
-                    {/*             <div className="hero__test">
-                <h2 className="hero__author">Jane Doe</h2>
-            </div> */}
                     <h2 className="hero__author">Jane Doe</h2>
                     <div className="hero__poster">
                         <img src={obrazek} alt="tort z kwiatami" className="hero__img" />
                         <h1 className="hero__primaryTitle"><span>Torty</span> na wszelkie okazje</h1>
                     </div>
-                    {/* <img src={obrazek} alt="" /> */}
-                    {/* <h1 className="test">Torty na wszelkie okazje</h1> */}
                     <div className="hero__buttons">
                         <button className="hero__button hero__button--check">Sprawdź</button>
                         <button className="hero__button hero__button--contact">Kontakt</button>
                     </div>
-                    {/* <img className="hero__lukier" src={lukier} alt="lukier" /> */} {/* z tym rozwiazaniem jest taki problem, ze nie zle sie position na telefonie ustawia, w wersji life, testowanym na moim */}
-                    <div className="hero__lukier"> {/* w wersji z divem dziala */}
+                    <div className="hero__lukier">
                         <img className="hero__lukier-img" src={lukier} alt="lukier" />
                     </div>
                 </div>
