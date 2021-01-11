@@ -24,7 +24,7 @@ const Contact = () => {
                         <input className="form-contact__input form-contact__input--email" type="email" id="email" name="email" required />
                         </label>
                         <label className="form-contact__item form-contact__item--number" htmlFor="phone">numer telefonu
-                        <input className="form-contact__input form-contact__input--number" type="tel" id="phone" name="phone" required/*  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" */ />
+                        <input className="form-contact__input form-contact__input--number" type="tel" id="phone" name="phone" required />
                         </label>
                     </div>
                     <div className="form-contact__userMessageContainer">
