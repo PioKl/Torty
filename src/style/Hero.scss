@@ -1,14 +1,9 @@
 @import './App.scss';
 
 .hero {
-    //height: calc(100vh - #{$navigationHeight});
-    //height: 100vh;
-    height: calc(100% - #{$navigationHeight});
     background-image: url(../images/tłoKwiatyLight.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    /*     display: flex;
-    flex-direction: column; */
     height: calc(100vh - #{$navigationHeight});
     position: relative; // rozwiazanie 2
 
@@ -217,7 +212,6 @@
 
 .hero-desktop {
     height: calc(100vh - #{$navigationHeightLaptop});
-    //background-color: $backgroundDesktop;
     display: flex;
     flex-direction: row;
 
