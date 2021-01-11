@@ -28,8 +28,8 @@ const Hero = () => {
                         </div>
                         <span className="hero-desktop__barrier"></span>
                         <div className="hero-desktop__buttons">
-                            <button className="hero-desktop__button hero-desktop__button--check">Sprawdź</button>
-                            <button className="hero-desktop__button hero-desktop__button--contact">Kontakt</button>
+                            <a href="#gallery"><button className="hero-desktop__button hero-desktop__button--check">Sprawdź</button></a>
+                            <a href="#contact"><button className="hero-desktop__button hero-desktop__button--contact">Kontakt</button></a>
                         </div>
                     </div>
                     <div className="hero-desktop__lukier">
@@ -45,8 +45,8 @@ const Hero = () => {
                         <h1 className="hero__primaryTitle"><span>Torty</span> na wszelkie okazje</h1>
                     </div>
                     <div className="hero__buttons">
-                        <button className="hero__button hero__button--check">Sprawdź</button>
-                        <button className="hero__button hero__button--contact">Kontakt</button>
+                        <a href="#gallery"><button className="hero__button hero__button--check">Sprawdź</button></a>
+                        <a href="#contact"><button className="hero__button hero__button--contact">Kontakt</button></a>
                     </div>
                     <div className="hero__lukier">
                         <img className="hero__lukier-img" src={lukier} alt="lukier" />
