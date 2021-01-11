@@ -48,7 +48,6 @@ const Gallery = () => {
         else if (imageCounter >= 0) {
             setImageCounter(imageCounter - 1);
         }
-
     }
     const handleNextImage = () => {
         setImageCounter(imageCounter + 1);
