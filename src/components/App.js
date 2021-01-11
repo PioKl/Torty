@@ -16,7 +16,7 @@ function App() {
   return (
     <IsDesktopContextProvider>
       <BurgerMenuContextProvider>
-        <div className="App">
+        <div id="mainSite" className="App">
           <header className="header">
             <Navigation />
           </header>
@@ -27,7 +27,6 @@ function App() {
             <About />
             <Contact />
           </main>
-          {/* <footer className="footer"></footer> */}
           <Footer />
         </div>
       </BurgerMenuContextProvider>
