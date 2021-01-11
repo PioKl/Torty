@@ -279,6 +279,7 @@ $topPaddingOfDesktopContainer: calc(15.44px + (27 - 15.44) * ((100vw - #{$bp-med
         height: 247.5px;
         border: 1px solid $gold;
         border-bottom: 0;
+        object-fit: cover;
 
         /* Responsive Media Queries */
         @include desktopMedium {
