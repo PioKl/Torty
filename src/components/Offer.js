@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IsDesktopContext } from '../contexts/IsDesktopContext';
 import { BurgerMenuContext } from '../contexts/BurgerMenuContext';
-import kucharz from "../images/kucharzMobile.png";
-import offerWave from "../images/offerWave.png";
+import kucharz from "../images/kucharzMobile.webp";
+import offerWave from "../images/offerWave.webp";
 import Slider from "react-slick";
 function SampleNextArrow(props) {
     const { onClick } = props;
