@@ -14,13 +14,13 @@ input:-webkit-autofill:active {
     height: auto;
     display: flex;
     flex-direction: column;
-    background-image: url('../images/contactTłoMobile.png');
+    background-image: url('../images/contactTłoMobile.webp');
     background-repeat: no-repeat;
     background-size: cover;
 
     @include desktopSmall {
         height: 100vh;
-        background-image: url('../images/contactTłoDesktop.png');
+        background-image: url('../images/contactTłoDesktop.webp');
     }
 
     @include proNexusLandscape {
