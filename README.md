@@ -1,3 +1,6 @@
+Strona dotycząca fikcyjnej prezentacji wyrobów cukierniczych, stworzona na podstawie własnego projektu wykonanego w figmie.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
