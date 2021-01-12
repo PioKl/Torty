@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { IsDesktopContext } from '../contexts/IsDesktopContext';
 import { BurgerMenuContext } from '../contexts/BurgerMenuContext';
 import '../style/About.scss';
-import person from '../images/personPhoto.png';
-import aboutWaveTop from '../images/aboutWaveTop.png';
+import person from '../images/personPhoto.webp';
+import aboutWaveTop from '../images/aboutWaveTop.webp';
 const About = () => {
     const { width } = useContext(IsDesktopContext);
     const { burgerMenu } = useContext(BurgerMenuContext);
