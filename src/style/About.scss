@@ -12,7 +12,7 @@ $shapeHeightAndWidthDesktop: calc(100px + (228 - 100) * ((100vw - #{$bp-medium-l
 
     @include desktopSmall {
         height: 100vh; //jak zakomentuje to bedzie 2 rozwiazanie
-        background-image: url('../images/aboutTło.png');
+        background-image: url('../images/aboutTło.webp');
         background-repeat: no-repeat;
         background-size: cover;
     }
