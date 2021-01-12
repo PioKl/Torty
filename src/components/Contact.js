@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { IsDesktopContext } from '../contexts/IsDesktopContext';
 import { BurgerMenuContext } from '../contexts/BurgerMenuContext';
 import '../style/Contact.scss';
-import aboutContactWave from '../images/aboutContactWave.png'
+import aboutContactWave from '../images/aboutContactWave.webp'
 const Contact = () => {
     const { width } = useContext(IsDesktopContext);
     const { burgerMenu } = useContext(BurgerMenuContext);
