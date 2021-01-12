@@ -3,11 +3,11 @@ import '../style/Hero.scss';
 import { IsDesktopContext } from '../contexts/IsDesktopContext';
 import { BurgerMenuContext } from '../contexts/BurgerMenuContext';
 
-import obrazek from "../images/vector.png";
-import lukier from "../images/lukier.png";
-import lukierDesktop from "../images/lukierdesktop.png";
-import kwiatPoster from "../images/fancyplant.png";
-import kwiatyTransparent from "../images/tłoKwiatyTransparent.png";
+import obrazek from "../images/vector.webp";
+import lukier from "../images/lukier.webp";
+import lukierDesktop from "../images/lukierdesktop.webp";
+import kwiatPoster from "../images/fancyplant.webp";
+import kwiatyTransparent from "../images/tłoKwiatyTransparent.webp";
 const Hero = () => {
     const { width } = useContext(IsDesktopContext);
     const { burgerMenu } = useContext(BurgerMenuContext);
