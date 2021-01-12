@@ -3,10 +3,10 @@ import '../style/Gallery.scss';
 import { IsDesktopContext } from '../contexts/IsDesktopContext';
 import { BurgerMenuContext } from '../contexts/BurgerMenuContext';
 import Slider from "react-slick";
-import galeria1 from '../images/galeria1.png';
-import galeria2 from '../images/galeria2.png';
-import galeria3 from '../images/galeria3.png';
-import galeria4 from '../images/galeria4.png';
+import galeria1 from '../images/galeria1.webp';
+import galeria2 from '../images/galeria2.webp';
+import galeria3 from '../images/galeria3.webp';
+import galeria4 from '../images/galeria4.webp';
 
 function SampleNextArrow(props) {
     const { onClick } = props;
