@@ -1,4 +1,7 @@
 Strona dotycząca fikcyjnej prezentacji wyrobów cukierniczych, stworzona na podstawie własnego projektu wykonanego w figmie.
+Jest ona responsywna, projektowanie RWD w tym przypadku, oparłem przede wszystkim na technice fluid typography.
+
+https://piokl.github.io/Torty/
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
