@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "21f04664bffa6fba674142b2dfe64c12",
+    "revision": "d9794c266262e1e1d5aa3204b9537783",
     "url": "/Torty/index.html"
   },
   {
-    "revision": "6b8415f0170cad423dfc",
+    "revision": "10d7e7b663e87d403b92",
     "url": "/Torty/static/css/2.69815e9f.chunk.css"
   },
   {
-    "revision": "03f2d947750c5a26caaf",
-    "url": "/Torty/static/css/main.8fe20586.chunk.css"
+    "revision": "12fbbbb2b9a7e5a19066",
+    "url": "/Torty/static/css/main.ab3515cd.chunk.css"
   },
   {
-    "revision": "6b8415f0170cad423dfc",
-    "url": "/Torty/static/js/2.cb21b706.chunk.js"
+    "revision": "10d7e7b663e87d403b92",
+    "url": "/Torty/static/js/2.a87517f8.chunk.js"
   },
   {
-    "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/Torty/static/js/2.cb21b706.chunk.js.LICENSE.txt"
+    "revision": "a0d0038c4737cb83ae088355a52bbd2f",
+    "url": "/Torty/static/js/2.a87517f8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "03f2d947750c5a26caaf",
-    "url": "/Torty/static/js/main.528d4927.chunk.js"
+    "revision": "12fbbbb2b9a7e5a19066",
+    "url": "/Torty/static/js/main.fe5fdc55.chunk.js"
   },
   {
     "revision": "f5054b2b7820392aad3c",

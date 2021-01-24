@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Torty/precache-manifest.5950982375e4f39a9e22cb341f86abcc.js"
+  "/Torty/precache-manifest.d8c6b8226b51b9b9e2401a5e031860ff.js"
 );
 
 self.addEventListener('message', (event) => {
