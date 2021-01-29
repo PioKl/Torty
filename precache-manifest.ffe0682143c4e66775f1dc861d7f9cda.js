@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4c9560199f75d81af5781dd7d7dacd5b",
+    "revision": "ea2abbbf4cd6e4d1afc620d967f8084e",
     "url": "/Torty/index.html"
   },
   {
