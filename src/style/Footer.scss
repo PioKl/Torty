@@ -151,18 +151,18 @@
 
         &:before {
             content: '';
-            width: 1px;
             position: absolute;
             left: -10%;
-            border-bottom: calc(170px + (360 - 170) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16}))) solid $gold;
+            border-left: 1px solid $gold;
+            height: calc(170px + (360 - 170) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         }
 
         &:after {
             content: '';
-            width: 1px;
             position: absolute;
             left: 110%;
-            border-bottom: calc(170px + (360 - 170) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16}))) solid $gold;
+            border-left: 1px solid $gold;
+            height: calc(170px + (360 - 170) * ((100vh - #{$bp-small-landscapeHeight/1em*16px}) / (#{$bp-medium-landscapeHeight/1em * 16} - #{$bp-small-landscapeHeight/1em * 16})));
         }
     }
 
@@ -180,27 +180,27 @@
 
         &:before {
             content: '';
-            width: 1px;
             position: absolute;
-            border-width: 230px;
-            border-bottom: 120px solid $gold;
+            border-left: 1px solid $gold;
+            height: 120px;
             left: -80%;
 
             @include desktopMedium {
-                border-width: calc(120px + (281.65 - 120) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                height: calc(120px + (281.65 - 120) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                border-width: calc(1px + (3 - 1) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
             }
         }
 
         &:after {
             content: '';
-            width: 1px;
             position: absolute;
-            border-width: 230px;
-            border-bottom: 120px solid $gold;
+            border-left: 1px solid $gold;
+            height: 120px;
             left: 180%;
 
             @include desktopMedium {
-                border-width: calc(120px + (281.65 - 120) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                height: calc(120px + (281.65 - 120) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
+                border-width: calc(1px + (3 - 1) * ((100vw - #{$bp-medium-laptopWidth/1em*16px}) / (#{$bp-large-laptopWidth/1em * 16} - #{$bp-medium-laptopWidth/1em * 16})));
             }
         }
     }
