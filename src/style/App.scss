@@ -3,6 +3,8 @@
 @import './Reusable.scss';
 @import './Mixins.scss';
 
+$sealSize: 20vh;
+
 .App {
   //https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space
   //zajmowanie calego miejsca przez App
@@ -11,6 +13,20 @@
 
 .cakeBox {
   display: flex;
+  backface-visibility: hidden;
+
+  &__seal {
+    position: fixed;
+    background-image: url('../svg/kokarda.svg');
+    background-repeat: no-repeat;
+    background-size: $sealSize;
+    width: $sealSize;
+    height: $sealSize;
+    z-index: 101;
+    top: 53.3%;
+    left: 50.5%;
+    transform: translate(-53.3%, -50.5%);
+  }
 
   &__left {
     background: $backgroundDesktop;
@@ -50,10 +66,12 @@
     position: fixed;
     top: 0;
     left: 50%;
-    width: 50%;
+    width: 50.1%;
     height: 100%;
     z-index: 100;
     border-left: 2.5vh solid $gold;
+    margin-left: -.9px;
+    //width: 50.1% i margin-left: -.9px jest w celu rozwiązania problemu niepotrzebnej białej pionowej kreski wzdłuż kontenera
 
     &:after {
       content: "";
