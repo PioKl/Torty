@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "552f1526a0388e8aa3f5eb6d45ce1e29",
+    "revision": "1378dbc45e75ad84d2978bc47887162f",
     "url": "/Torty/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Torty/static/css/2.69815e9f.chunk.css"
   },
   {
-    "revision": "6a3014a4bb8c95351c5c",
+    "revision": "3b2a1735e576040be2dc",
     "url": "/Torty/static/css/main.8de83cc1.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Torty/static/js/2.a87517f8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6a3014a4bb8c95351c5c",
-    "url": "/Torty/static/js/main.290575b4.chunk.js"
+    "revision": "3b2a1735e576040be2dc",
+    "url": "/Torty/static/js/main.43a9e364.chunk.js"
   },
   {
     "revision": "f5054b2b7820392aad3c",
