@@ -14,6 +14,7 @@ $sealSize: 20vh;
 .cakeBox {
   display: flex;
   backface-visibility: hidden;
+  height: 100%;
 
   &__seal {
     position: fixed;
@@ -94,5 +95,36 @@ $sealSize: 20vh;
       border-bottom-right-radius: 90px;
       border-top-right-radius: 90px;
     }
+  }
+}
+
+.cakeBoxShade {
+  filter: brightness(20%) blur(10px);
+  overflow-x: hidden;
+  backdrop-filter: blur(10px); //pozbycie sie bialej obwodki blura, nie dziala z firefox
+}
+
+.loader {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  margin-top: -5.5vh;
+  margin-left: -7.5vh;
+  border: 2vh solid rgb(255, 255, 255);
+  border-radius: 50%;
+  border-top: 2vh solid $gold;
+  width: 15vh;
+  height: 15vh;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
