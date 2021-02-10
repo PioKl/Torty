@@ -17,7 +17,6 @@ function App() {
 
   const [loaded, setLoaded] = useState(false)
   window.addEventListener("load", function () {
-    console.log("JUz")
     setTimeout(() => {
       setLoaded(true)
     }, 2000) //po zaladowaniu odczekaj jeszcze 2s
