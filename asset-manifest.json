@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Torty/static/css/main.8de83cc1.chunk.css",
-    "main.js": "/Torty/static/js/main.43a9e364.chunk.js",
-    "main.js.map": "/Torty/static/js/main.43a9e364.chunk.js.map",
+    "main.css": "/Torty/static/css/main.dd910b74.chunk.css",
+    "main.js": "/Torty/static/js/main.7adbe266.chunk.js",
+    "main.js.map": "/Torty/static/js/main.7adbe266.chunk.js.map",
     "runtime-main.js": "/Torty/static/js/runtime-main.444559da.js",
     "runtime-main.js.map": "/Torty/static/js/runtime-main.444559da.js.map",
     "static/css/2.69815e9f.chunk.css": "/Torty/static/css/2.69815e9f.chunk.css",
     "static/js/2.a87517f8.chunk.js": "/Torty/static/js/2.a87517f8.chunk.js",
     "static/js/2.a87517f8.chunk.js.map": "/Torty/static/js/2.a87517f8.chunk.js.map",
     "index.html": "/Torty/index.html",
-    "precache-manifest.0aaff2a47b4eabc98f646fc996c7cd02.js": "/Torty/precache-manifest.0aaff2a47b4eabc98f646fc996c7cd02.js",
+    "precache-manifest.3afd9589c24122bebe4d48555994bcc1.js": "/Torty/precache-manifest.3afd9589c24122bebe4d48555994bcc1.js",
     "service-worker.js": "/Torty/service-worker.js",
     "static/css/2.69815e9f.chunk.css.map": "/Torty/static/css/2.69815e9f.chunk.css.map",
-    "static/css/main.8de83cc1.chunk.css.map": "/Torty/static/css/main.8de83cc1.chunk.css.map",
+    "static/css/main.dd910b74.chunk.css.map": "/Torty/static/css/main.dd910b74.chunk.css.map",
     "static/js/2.a87517f8.chunk.js.LICENSE.txt": "/Torty/static/js/2.a87517f8.chunk.js.LICENSE.txt",
     "static/media/aboutContactWave.webp": "/Torty/static/media/aboutContactWave.338befee.webp",
     "static/media/About.scss": "/Torty/static/media/aboutTło.08cbc38a.webp",
@@ -46,7 +46,7 @@
     "static/js/runtime-main.444559da.js",
     "static/css/2.69815e9f.chunk.css",
     "static/js/2.a87517f8.chunk.js",
-    "static/css/main.8de83cc1.chunk.css",
-    "static/js/main.43a9e364.chunk.js"
+    "static/css/main.dd910b74.chunk.css",
+    "static/js/main.7adbe266.chunk.js"
   ]
 }
